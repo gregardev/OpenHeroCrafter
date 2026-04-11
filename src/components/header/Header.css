@@ -1,0 +1,5 @@
+@font-face {
+  font-family: 'Comicy';
+  src: local('Comicy'), 
+    url('../../fonts/comicy/Comicy.ttf'), format("truetype");
+}
