@@ -4,6 +4,7 @@ import './index.css'
 import App from './App.tsx'
 import { CssBaseline, CssVarsProvider } from '@mui/joy'
 import { mytheme } from './theme/mytheme.ts'
+import ActiveHeroContextProvider from './context/ActiveHeroContext.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -12,7 +13,9 @@ createRoot(document.getElementById('root')!).render(
       modeStorageKey="mode-toggle-demo"
       disableNestedContext
     >
-      <App />
+      <ActiveHeroContextProvider>
+        <App />
+      </ActiveHeroContextProvider>
       <CssBaseline />
     </CssVarsProvider>
   </StrictMode>,
