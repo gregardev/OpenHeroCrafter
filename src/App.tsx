@@ -32,10 +32,7 @@ function App() {
             <HeroCard />
           </Sheet>
           <TabPanel value={0}>
-            <HeroDetails 
-              activeHero={activeHero}
-              setActiveHero={setActiveHero}
-            />
+            <HeroDetails />
           </TabPanel>
           <TabPanel value={1}>
             <b>Second</b> tab panel

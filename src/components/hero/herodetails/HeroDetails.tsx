@@ -3,7 +3,7 @@ import FloatingLabelInput from "../../joyui/FloatingLabelInput";
 import type { Hero } from "../../../interfaces/hero";
 import { handleHeroAttrChangeSTR } from "../../../handlers/handleHeroAttrChange";
 
-export default function HeroDetails({activeHero,setActiveHero}:{activeHero:Hero, setActiveHero: React.Dispatch<React.SetStateAction<Hero>>}){
+export default function HeroDetails(){
 
 
     return (
