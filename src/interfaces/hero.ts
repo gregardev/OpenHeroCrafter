@@ -1,6 +1,7 @@
 export type IdType = "public" | "secret" | "none"
 
 export interface Hero {
+    // Main Data
     hero: string,
     player: string,
     identity: string,
@@ -8,6 +9,7 @@ export interface Hero {
     pl: number,
     xp: number,
     hp: number,
+
     // Abilities
     // > Strength
     str: number, // score
@@ -41,6 +43,27 @@ export interface Hero {
     pre: number, // pre Stat
     rpre: number, // Rank
     dpre: boolean, // disable
+
+    // Defenses 
+    // > Dodge 
+    dod: number // stat
+    rdod: number // rank 
+
+    // > Parry 
+    par: number // stat
+    rpar: number // rank
+    
+    // > Toughness 
+    tou: number // stat
+
+    // > Fort Defense 
+    fod: number // stat
+    rfod: number // rank
+    
+    // > will Defense 
+    wid: number // stat
+    rwid: number // rank
+    
 }
 
 export const defaultHero: Hero = {
@@ -75,5 +98,14 @@ export const defaultHero: Hero = {
     pre:0,
     rpre:0,
     dpre:false,
+    dod:0,
+    rdod:0,
+    par:0,
+    rpar:0,
+    tou:0,
+    fod:0,
+    rfod:0,
+    wid:0,
+    rwid:0
     
 }

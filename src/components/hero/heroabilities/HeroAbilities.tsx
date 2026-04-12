@@ -1,5 +1,6 @@
 import { Box, Card, Divider, Table, Typography } from "@mui/joy";
 import HeroAbilitiesTable from "./HeroAbilitiesTable";
+import HeroDefensesTable from "./HeroDefensesTable";
 
 export default function HeroAbilities(){
 
@@ -21,9 +22,7 @@ export default function HeroAbilities(){
                     <Typography>Abilities</Typography>
                     <HeroAbilitiesTable />
                     <Typography>Defenses</Typography>
-                    <Table aria-label="Defences" sx={{width:'400px'}} color="primary">
-                        
-                    </Table>
+                    <HeroDefensesTable />
                 </Card>
                 <Card
                     sx={{m:1}}

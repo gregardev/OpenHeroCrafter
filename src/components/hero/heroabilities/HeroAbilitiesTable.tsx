@@ -1,6 +1,7 @@
-import { Checkbox, Input, styled, Table } from "@mui/joy";
+import { Checkbox, Input, Table } from "@mui/joy";
 import useActiveHero from "../../../hooks/useActiveHero";
 import type { Hero } from "../../../interfaces/hero";
+import StyledTR from "../../joyui/StyledTR";
 
 const abilities = [
     {key:'str',label:'Strength'},
@@ -13,14 +14,7 @@ const abilities = [
     {key:'pre',label:'Presence'},
 ]
 
-const StyledTR = styled('tr')<{ 
-  overPowerLimit?: boolean;
-}>(({ theme, overPowerLimit }) => ({
-  backgroundColor: overPowerLimit 
-    ? theme.vars.palette.danger.softBg 
-    : 'transparent',
-  transition: 'background-color 0.2s ease',
-}));
+
 
 export default function HeroAbilitiesTable(){
     const {activeHero, changeActiveHeroAbility, changeActiveHeroAbilityDisable} = useActiveHero();
