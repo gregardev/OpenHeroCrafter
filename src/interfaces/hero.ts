@@ -9,22 +9,38 @@ export interface Hero {
     xp: number,
     hp: number,
     // Abilities
-    str: number, // Strength Stat
-    rstr: number, // Rank of Strength
-    sta: number, // Stamina Stat
-    rsta: number, // Rank of Stamina
-    agi: number, // Agility Stat
-    ragi: number, // Rank of Agility
+    // > Strength
+    str: number, // score
+    rstr: number, // rank
+    dstr: boolean, // disable
+    // > Stamina
+    sta: number, // score
+    rsta: number, // Rank 
+    dsta: boolean, // Disable
+    // > Agility
+    agi: number, // score
+    ragi: number, // Rank 
+    dagi: boolean, // Disable
+    // > Dexterity
     dex: number, // dex Stat
-    rdex: number, // Rank of dex
+    rdex: number, // Rank 
+    ddex: boolean, // Disable 
+    // > Fighting
     fgt: number, // Fighting Stat
-    rfgt: number, // Rank of Fighting
+    rfgt: number, // Rank
+    dfgt: boolean // Disable
+    // > Intellect
     int: number, // Int Stat
-    rint: number, // Rank of Int
+    rint: number, // Rank
+    dint: boolean, // Disable
+    // > Awerness
     awe: number, // awe Stat
-    rawe: number, // Rank of awe
+    rawe: number, // Rank
+    dawe: boolean, // Disable
+    // > Precense 
     pre: number, // pre Stat
-    rpre: number, // Rank of pre
+    rpre: number, // Rank
+    dpre: boolean, // disable
 }
 
 export const defaultHero: Hero = {
@@ -37,19 +53,27 @@ export const defaultHero: Hero = {
     hp:1,
     str:0,
     rstr:0,
+    dstr:false,
     sta:0,
     rsta:0,
+    dsta:false,
     agi:0,
     ragi:0,
+    dagi:false,
     dex:0,
     rdex:0,
+    ddex:false,
     fgt:0,
     rfgt:0,
+    dfgt:false,
     int:0,
     rint:0,
+    dint:false,
     awe:0,
     rawe:0,
+    dawe:false,
     pre:0,
     rpre:0,
+    dpre:false,
     
 }

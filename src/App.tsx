@@ -5,12 +5,12 @@ import Header from './components/header/Header'
 import HeroDetails from './components/hero/herodetails/HeroDetails'
 import HeroCard from './components/hero/herocard/HeroCard'
 import HeroAbilities from './components/hero/heroabilities/HeroAbilities'
-import HeroPlay from './components/hero/heroplay/heroplay'
-import HeroSkills from './components/hero/heroskills/heroskills'
+import HeroPlay from './components/hero/heroplay/HeroPlay'
+import HeroSkills from './components/hero/heroskills/HeroSkills'
 import HeroAdvantages from './components/hero/heroadvantages/HeroAdvantages'
-import HeroGear from './components/hero/herogear/herogear'
-import HeroPower from './components/hero/heropower/heropower'
-import HeroComplications from './components/hero/herocomplications/herocomplications'
+import HeroGear from './components/hero/herogear/HeroGear'
+import HeroPower from './components/hero/heropower/HeroPower'
+import HeroComplications from './components/hero/herocomplications/HeroComplications'
 
 function App() {
 

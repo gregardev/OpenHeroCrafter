@@ -5,4 +5,5 @@ export interface ActiveHeroContextValue {
     changeActiveHeroAttrSTR: (field:string, newVal:string) => void;
     changeActiveHeroAttrNUM: (field:string, newVal:number) => void;
     changeActiveHeroAbility: (ability:string, newVal:number) => void;
+    changeActiveHeroAbilityDisable: (ability:string, newVal:boolean) => void
 }

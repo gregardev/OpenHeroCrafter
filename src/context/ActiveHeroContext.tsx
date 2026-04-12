@@ -28,13 +28,18 @@ export default function ActiveHeroContextProvider({children}:Props){
         setActiveHero({...activeHero, ['r'+ability]: newVal, [ability]:newVal});
     }
 
+    function changeActiveHeroAbilityDisable(ability:string, newVal:boolean){
+        setActiveHero({...activeHero, ['r'+ability]: 0, [ability]:0, ['d'+ability]:newVal});
+    }
+
     return (
         <ActiveHeroContext.Provider 
             value={{
                 activeHero:activeHero, 
                 changeActiveHeroAttrSTR: changeActiveHeroAttrSTR,
                 changeActiveHeroAttrNUM: changeActiveHeroAttrNUM,
-                changeActiveHeroAbility: changeActiveHeroAbility
+                changeActiveHeroAbility: changeActiveHeroAbility,
+                changeActiveHeroAbilityDisable: changeActiveHeroAbilityDisable
             }}
         >
             {children}

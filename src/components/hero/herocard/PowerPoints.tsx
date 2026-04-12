@@ -14,7 +14,18 @@ export default function PowerPoints(){
     }
 
     function calculateSpentAbilityPoints(){
-        return Number(activeHero.rstr)*2 + Number(activeHero.rsta)*2 + Number(activeHero.ragi)*2 + Number(activeHero.rdex)*2 + Number(activeHero.rfgt)*2 + Number(activeHero.rint)*2 + Number(activeHero.rawe)*2 + Number(activeHero.rpre)*2;
+        let sum = 0; 
+        // add 2 points for each ability
+        sum = sum + (2*( Number(activeHero.rstr) + Number(activeHero.rsta) + Number(activeHero.ragi) +        
+        Number(activeHero.rdex) + Number(activeHero.rfgt) + Number(activeHero.rint) + Number(activeHero.rawe) + 
+        Number(activeHero.rpre)));
+        // minus 10 for each disabled ability
+        sum = sum - (10*( Number(activeHero.dstr) + Number(activeHero.dsta) + Number(activeHero.dagi) +        
+        Number(activeHero.ddex) + Number(activeHero.dfgt) + Number(activeHero.dint) + Number(activeHero.dawe) + 
+        Number(activeHero.dpre)));
+
+        return sum;
+        
     }
 
     const [totalAvailablePowerPoints, setTotalAvailablePowerPoints] = useState(calculateTotalAvailablePowerPoints);
