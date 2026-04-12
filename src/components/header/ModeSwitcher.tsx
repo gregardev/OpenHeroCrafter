@@ -22,9 +22,9 @@ export default function ModeSwitcher() {
         setMode(newMode);
       }}
     >
-      <Option value="system">System</Option>
-      <Option value="light">Light</Option>
-      <Option value="dark">Dark</Option>
+      <Option value="system">🖥️ System</Option>
+      <Option value="light">☀️ Light</Option>
+      <Option value="dark">🌙 Dark</Option>
     </Select>
   );
 }

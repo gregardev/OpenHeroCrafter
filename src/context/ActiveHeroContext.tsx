@@ -15,6 +15,7 @@ export default function ActiveHeroContextProvider({children}:Props){
         hero:{...defaultHero} 
     })
 
+    
     function changeActiveHeroAttrSTR(field:string, newVal:string){
         setActiveHero({...activeHero, [field]:newVal});
     }
@@ -23,12 +24,17 @@ export default function ActiveHeroContextProvider({children}:Props){
         setActiveHero({...activeHero, [field]:newVal});
     }
 
+    function changeActiveHeroAbility(ability:string, newVal:number){
+        setActiveHero({...activeHero, ['r'+ability]: newVal, [ability]:newVal});
+    }
+
     return (
         <ActiveHeroContext.Provider 
             value={{
                 activeHero:activeHero, 
                 changeActiveHeroAttrSTR: changeActiveHeroAttrSTR,
-                changeActiveHeroAttrNUM: changeActiveHeroAttrNUM
+                changeActiveHeroAttrNUM: changeActiveHeroAttrNUM,
+                changeActiveHeroAbility: changeActiveHeroAbility
             }}
         >
             {children}
