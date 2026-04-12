@@ -9,7 +9,8 @@ export default function Header(){
         <Sheet 
             variant='soft'
             sx={{
-                display:'flex'
+                display:'flex',
+                minHeight:'4vh'
             }}
         >
             <Typography sx={{p:1, fontFamily:'Comicy'}}>Open Hero Crafter</Typography>

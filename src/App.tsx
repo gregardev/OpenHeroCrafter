@@ -1,24 +1,28 @@
-import { Box, Sheet, Tab, TabList, TabPanel, Tabs } from '@mui/joy'
+import { Box, Tab, TabList, TabPanel, Tabs } from '@mui/joy'
 import './App.css'
 import Footer from './components/footer/Footer'
 import Header from './components/header/Header'
 import HeroDetails from './components/hero/herodetails/HeroDetails'
-import useSaveHeroToLocalStorage from './hooks/useSaveHeroToLocalStorage'
-import { defaultHero } from './interfaces/hero'
 import HeroCard from './components/hero/herocard/HeroCard'
 
 function App() {
 
   return (
-    <main>
+    <Box
+      sx={{
+        minHeight:'100vh'
+      }}
+    >
       <Header />
       <Tabs
         orientation="vertical"
-        sx={{ height:'100vh'}}
+        sx={{
+          minHeight:'96vh'
+        }}
       >
         <TabList>
+          <Tab>In Play</Tab>
           <Tab>Hero Details</Tab>
-          <Tab>Second tab</Tab>
           <Tab>Third tab</Tab>
         </TabList>
         <Box
@@ -28,22 +32,19 @@ function App() {
             flexDirection:'column'
           }}
         >
-          <Sheet variant='soft' sx={{m:2}}>
-            <HeroCard />
-          </Sheet>
+          <HeroCard />
           <TabPanel value={0}>
-            <HeroDetails />
           </TabPanel>
           <TabPanel value={1}>
-            <b>Second</b> tab panel
+            <HeroDetails />
           </TabPanel>
           <TabPanel value={2}>
             <b>Third</b> tab panel
           </TabPanel>
+          <Footer />
         </Box>
       </Tabs>
-      <Footer />
-    </main>
+    </Box>
   )
 }
 

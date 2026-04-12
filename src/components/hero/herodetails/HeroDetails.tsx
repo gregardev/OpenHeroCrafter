@@ -1,7 +1,4 @@
-import { Box, Divider, Option, Select, Typography } from "@mui/joy";
-import FloatingLabelInput from "../../joyui/FloatingLabelInput";
-import type { Hero } from "../../../interfaces/hero";
-import { handleHeroAttrChangeSTR } from "../../../handlers/handleHeroAttrChange";
+import { Box, Divider, Typography } from "@mui/joy";
 
 export default function HeroDetails(){
 

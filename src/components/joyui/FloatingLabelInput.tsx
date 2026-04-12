@@ -66,11 +66,12 @@ const InnerInput = React.forwardRef<
   );
 });
 
-export default function FloatingLabelInput({label, placeholder,value, onChange}:{label: string, placeholder: string, value:string, onChange:(event: React.ChangeEvent<HTMLInputElement>) => void}) {
+export default function FloatingLabelInput({label, placeholder="",value, onChange, type='text'}:{label: string, placeholder?: string, value:string|number, onChange:(event: React.ChangeEvent<HTMLInputElement>) => void, type?:string}) {
   return (
     <Input
       slots={{ input: InnerInput}}
-      slotProps={{ input: { placeholder: placeholder? placeholder : "", label:label, value:value, onChange:onChange} }}
+      type={type}
+      slotProps={{ input: { placeholder: placeholder , label:label, value:value, onChange:onChange} }}
       sx={{ '--Input-minHeight': '56px', '--Input-radius': '6px' }}
     />
   );
