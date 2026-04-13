@@ -18,6 +18,9 @@ export default function HeroAdvantages(){
                             Advantage
                         </th>
                         <th>
+                            Type
+                        </th>
+                        <th>
                             Effect
                         </th>
                     </thead>
@@ -26,6 +29,9 @@ export default function HeroAdvantages(){
                             <tr>
                                 <td>
                                     {adv.name}
+                                </td>
+                                <td>
+                                    {adv.type}
                                 </td>
                                 <td>
                                     {adv.effect}

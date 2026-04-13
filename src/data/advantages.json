@@ -40,7 +40,7 @@
         "name":"Artificer",
         "type":"Skill",
         "effect":"Use Expertise: Magic to create temporary magical devices.",
-        "decription":"For magical, rather than technological, inventions, use the normal inventing rules, but substitute the Expertise: Magic skill for the Technology skill on the design and construction checks.",
+        "description":"For magical, rather than technological, inventions, use the normal inventing rules, but substitute the Expertise: Magic skill for the Technology skill on the design and construction checks.",
         "ranked":false,
         "mods":[]
     },
@@ -63,5 +63,108 @@
         "maxrank":2,
         "costperrank":1,
         "mods":[]
+    },
+    {
+        "id":8,
+        "name":"Beginner's Luck",
+        "type":"Fortune",
+        "effect":"Spend an effort point to gain 5 temporary ranks in a skill.",
+        "description":"By spending an effort point, you gain an effective 5 ranks in one skill of your choice you currently have at 4 or fewer ranks, including skills you have no ranks in, even if they can’t be used untrained. These temporary skill ranks last for the duration of the scene and grant you their normal benefits.",
+        "ranked":false,
+        "mods":[]
+    },
+    {
+        "id":9,
+        "name":"Benefit",
+        "type":"General",
+        "effect":"Gain a significant prerequisite or fringe benefit.",
+        "description":"You have some significant perquisite or fringe benefit. The exact nature of the benefit is for you and the Gamemaster to determine. As a rule of thumb it should not exceed the benefits of any other advantage, or a power effect costing 1 point (see Feature in Powers). It should also be significant enough to cost at least 1 Character point. An example is Diplomatic Immunity (see Sample Benefits). A license to practice law or medicine, on the other hand, should not be considered a Benefit; it’s simply a part of having training in the appropriate Expertise skill and has no significant game effect.\nBenefits may come in ranks for improved levels of the same benefit. The GM is the final arbiter as to what does and does not constitute a Benefit in the setting. Keep in mind some qualities may constitute Benefits in some series, but not in others, depending on whether or not they have any real impact on the game.",
+        "ranked":true,
+        "maxrank":-1,
+        "costperrank":1,
+        "mods":[]
+    },
+    {
+        "id":10,
+        "name":"Chokehold",
+        "type":"Combat",
+        "effect":"",
+        "description":"If you successfully grab and restrain an opponent (see Grab), you can apply a chokehold, causing your opponent to begin suffocating for as long as you continue to restrain your target (see Suffocation).",
+        "ranked":false,
+        "mods":[]
+    },
+    {
+        "id":10,
+        "name":"Close Attack",
+        "type":"Combat",
+        "effect":"",
+        "description":"You have a +1 bonus to close attacks checks per rank in this advantage. Your total attack bonus is still limited by power level. This advantage best suits characters with a level of overall close combat skill (armed and unarmed). For capability with a particular type of attack, use the Close Combat skill.",
+        "ranked":true,
+        "maxrank":-1,
+        "costperrank":1,
+        "mods":[]
+    },
+    {
+        "id":11,
+        "name":"Connected",
+        "type":"Skill",
+        "effect":"",
+        "description":"You know people who can help you out from time to time. It might be advice, information, help with a legal matter, or access to resources. You can call in such favors by making a Persuasion check. The GM sets the DC of the check, based on the aid required. A simple favor is DC 10, ranging up to DC 25 or higher for especially difficult, dangerous, or expensive favors. You can spend an effort point to automatically secure the favor, if the GM allows it. The GM has the right to veto any request if it is too involved or likely to spoil the plot of the adventure. Use of this advantage always requires at least a few minutes (and often much longer) and the means to contact your allies to ask for their help.",
+        "ranked":false,
+        "mods":[]
+    },
+    {
+        "id":12,
+        "name":"Daze",
+        "type":"Skill",
+        "effect":"",
+        "description":"You can make a Deception or Intimidation check as a standard action (choose which skill when you acquire the advantage) to cause an opponent to hesitate in combat. Make a skill check as a standard action against your target’s resistance check (the same skill, Insight, or Will defense, whichever has the highest bonus). If you win, your target is dazed (able to take only a standard action) until the end of your next round. The ability to Daze with Deception and with Intimidation are separate advantages. Take this advantage twice in order to be able to do both.",
+        "ranked":true,
+        "maxrank":2,
+        "costperrank":1,
+        "mods":[]
+    },
+    {
+        "id":13,
+        "name":"Defensive Attack",
+        "type":"Combat",
+        "effect":"Increases the effectivness of Defensive Attack Maneuver",
+        "description":"When you make a defensive attack maneuver you can take a penalty of up to –5 on your attack bonus and add the same number (up to +5) to both your active defenses (Dodge and Parry).",
+        "ranked":false,
+        "mods":[]
+    },
+    {
+        "id":14,
+        "name":"Defensive Roll",
+        "type":"Combat",
+        "effect":"",
+        "description":"You can avoid damage through agility and “rolling” with an attack. You receive a bonus to your Toughness equal to your advantage rank, but it is considered an active defense similar to Dodge and Parry, so you lose this bonus whenever you are vulnerable or defenseless. Your total Toughness, including this advantage, is still limited by power level.\nThis advantage is common for heroes who lack either superhuman speed or toughness, relying on their agility and training to avoid harm.",
+        "ranked":true,
+        "maxrank":-1,
+        "costperrank":1,
+        "mods":[]
+    },
+    {
+        "id":15,
+        "name":"Diehard",
+        "type":"General",
+        "effect":"",
+        "description":"When your condition becomes dying you automatically stabilize on the following round without any need for a Stamina check, although further damage—such as a finishing attack—can still kill you.",
+        "ranked":false,
+        "mods":[]
+    },
+    {
+        "id":16,
+        "name":"Eidetic Memory",
+        "type":"General",
+        "effect":"",
+        "description":""
+    },
+    {
+        "id":17,
+        "name":"Equipment",
+        "type":"General",
+        "effect":""
+
     }
 ]

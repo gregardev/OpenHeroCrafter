@@ -66,7 +66,7 @@ export interface Hero {
     wid: number // stat
     rwid: number // rank
     
-    advantages: Advantage[]
+    advantages?: Advantage[]
 }
 
 export const defaultHero: Hero = {

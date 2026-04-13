@@ -27,13 +27,17 @@ function App() {
           minHeight:'96vh'
         }}
       >
-        <TabList>
+        <TabList
+          sx={{
+            minWidth:250
+          }}
+        >
           <Tab>In Play</Tab>
           <Tab>Character Details</Tab>
           <Tab>Abilities and Defenses</Tab>
           <Tab>Advantages</Tab>
           <Tab>Skills</Tab>
-          <Tab>Equipment</Tab>
+          <Tab>Equipment and Headquarters</Tab>
           <Tab>Powers</Tab>
           <Tab>Complications and Backstory</Tab>
         </TabList>

@@ -1,6 +1,6 @@
 import FloatingLabelInput from "../../joyui/FloatingLabelInput";
 import { Box, Card, Option, Select, Typography } from "@mui/joy";
-import PowerPoints from "./PowerPoints";
+import CharacterPoints from "./CharacterPoints";
 import useActiveHero from "../../../hooks/useActiveHero";
 
 
@@ -105,7 +105,8 @@ export default function HeroCard(){
                         >
                             <FloatingLabelInput
                                 label="PL"
-                                value={activeHero.pl}
+                                value={Number(activeHero.pl)}
+                                type="number"
                                 onChange={(e)=>changeActiveHeroAttrNUM('pl',Number(e.target.value))}
                             />
                         </Box>
@@ -118,13 +119,14 @@ export default function HeroCard(){
                         >
                             <FloatingLabelInput
                                 label="XP"
-                                value={activeHero.xp}
+                                value={Number(activeHero.xp)}
+                                type="number"
                                 onChange={(e)=>changeActiveHeroAttrNUM('xp',Number(e.target.value))}
                             />
                         </Box>
                     </Box>
                 </Box>
-                <PowerPoints />
+                <CharacterPoints />
             </Box>
         </Card>
     )

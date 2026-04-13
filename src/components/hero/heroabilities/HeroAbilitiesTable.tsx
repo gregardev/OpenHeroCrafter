@@ -34,7 +34,7 @@ export default function HeroAbilitiesTable(){
                         overPowerLimit={Number(activeHero[(ab.key) as keyof Hero])>(Number(activeHero.pl)*2)}
                     >
                         <td>{ab.label}</td>
-                        <td>{Boolean(activeHero[('d'+ab.key)as keyof Hero])?'---':(activeHero[ab.key as keyof Hero] ?? 0)}</td>
+                        <td>{Boolean(activeHero[('d'+ab.key)as keyof Hero])?'---':(activeHero[ab.key as keyof Hero] ?? 0) as string | number}</td>
                         <td>
                             <Input 
                                 type="number"

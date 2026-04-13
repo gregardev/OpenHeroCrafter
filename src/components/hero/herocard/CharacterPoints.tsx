@@ -2,7 +2,7 @@ import { Sheet, Typography } from "@mui/joy";
 import {  useEffect, useState } from "react";
 import useActiveHero from "../../../hooks/useActiveHero";
 
-export default function PowerPoints(){
+export default function CharacterPoints(){
 
     const {activeHero} = useActiveHero();
 
@@ -10,7 +10,7 @@ export default function PowerPoints(){
     const [spentAbilityPoints, setSpentAbilityPoints] = useState(0);
     const [spentDefensePoints, setSpentDefensePoints] = useState(0);
 
-    function calculateTotalAvailablePowerPoints(){
+    function calculateTotalAvailableCharacterPoints(){
         return (Number(activeHero.pl ?? 0) * 15) + (Number(activeHero.xp)?? 0);
     }
 
@@ -37,10 +37,10 @@ export default function PowerPoints(){
         return ( Number(activeHero.rdod) +  Number(activeHero.rpar) + Number(activeHero.rfod) + Number(activeHero.rwid));
     }   
 
-    const [totalAvailablePowerPoints, setTotalAvailablePowerPoints] = useState(calculateTotalAvailablePowerPoints);
+    const [totalAvailableCharacterPoints, setTotalAvailableCharacterPoints] = useState(calculateTotalAvailableCharacterPoints);
 
     useEffect(function(){
-        setTotalAvailablePowerPoints(calculateTotalAvailablePowerPoints);
+        setTotalAvailableCharacterPoints(calculateTotalAvailableCharacterPoints);
         setSpentAbilityPoints(calculateSpentAbilityPoints)
         setSpentDefensePoints(calculateSpentDefensePoints)
     },[activeHero]);
@@ -54,7 +54,7 @@ export default function PowerPoints(){
             variant="outlined"
         >
             <Typography>
-                Power Point Totals:{spentTotalPoints} = Abilities {spentAbilityPoints} + Defenses {spentDefensePoints}. Total Avialble Power Points:{totalAvailablePowerPoints}
+                Character Point Totals:{spentTotalPoints} = Abilities {spentAbilityPoints} + Defenses {spentDefensePoints}. Total Avialble Character Points:{totalAvailableCharacterPoints}
             </Typography>
         </Sheet>
     )
