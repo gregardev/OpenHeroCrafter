@@ -3,14 +3,65 @@
         "id":1,
         "name":"Accurate Attack",
         "type":"Combat",
-        "effect":"Increases the effectivness of Accurate Attack",
-        "description":"When you make an accurate attack maneuver you can take a penalty of up to –5 on the effect modifier of the attack and add the same number (up to +5) to your attack bonus."
+        "effect":"Increases the effectivness of Accurate Attack Maneuver",
+        "description":"When you make an accurate attack maneuver you can take a penalty of up to –5 on the effect modifier of the attack and add the same number (up to +5) to your attack bonus.",
+        "ranked":false,
+        "mods":[]
     },
     {
         "id":2,
         "name":"Agile Feint",
         "type":"Skill",
         "effect":"Feint using Acrobatics skill or movement speed.",
-        "description":"You can use your Acrobatics bonus or movement speed rank in place of Deception to feint and trick in combat as if your skill bonus or speed rank were your Deception bonus. Your opponent opposes the attempt with Acrobatics or Insight (whichever is better)"
+        "description":"You can use your Acrobatics bonus or movement speed rank in place of Deception to feint and trick in combat as if your skill bonus or speed rank were your Deception bonus. Your opponent opposes the attempt with Acrobatics or Insight (whichever is better)",
+        "ranked":false,
+        "mods":[]
+    },
+    {
+        "id":3,
+        "name":"All-Out Attack",
+        "type":"Combat",
+        "effect":"Increases the effectivness of All-Out Attack Maneuver",
+        "description":"When you make an all-out attack maneuver you can take a penalty of up to –5 on your active defenses (Dodge and Parry) and add the same number (up to +5) to your attack bonus.",
+        "ranked":false,
+        "mods":[]
+    },
+    {
+        "id":4,
+        "name":"Animal Empathy",
+        "type":"Skill",
+        "effect":"Use interaction skills normally with animals.",
+        "description":"You have a special connection with animals. You can use interaction skills on animals normally, and do not have to speak a language the animal understands; you communicate your intent through gestures and body language and learn things by studying animal behavior. Characters normally have a –10 circumstance penalty to use interaction skills on animals, due to their Intellect and lack of language.",
+        "ranked":false,
+        "mods":[]
+    },
+    {
+        "id":5,
+        "name":"Artificer",
+        "type":"Skill",
+        "effect":"Use Expertise: Magic to create temporary magical devices.",
+        "decription":"For magical, rather than technological, inventions, use the normal inventing rules, but substitute the Expertise: Magic skill for the Technology skill on the design and construction checks.",
+        "ranked":false,
+        "mods":[]
+    },
+    {
+        "id":6,
+        "name":"Assessment",
+        "type":"General",
+        "effect":"Use Insight to learn an opponent’s combat capabilities.",
+        "description":"You’re able to quickly size up an opponent’s combat capabilities. Choose a target you can accurately perceive and have the GM make a secret Insight check for you as a free action, opposed by the target’s Deception check result.\nIf you win, the GM tells you the target’s attack and defense bonuses relative to yours (lower, higher, or equal). With each additional degree of success, you learn one of the target’s bonuses exactly.\nIf you lose the opposed roll, you don’t find out anything. With more than one degree of failure, the GM may lie or otherwise exaggerate the target’s bonuses.",
+        "ranked":false,
+        "mods":[]
+    },
+    {
+        "id":7,
+        "name":"Attractive",
+        "type":"Skill",
+        "effect":"Circumstance bonus to interaction based on your looks.",
+        "description":"You’re particularly attractive, giving you a +2 circumstance bonus on Deception and Persuasion checks to deceive, seduce, or change the attitude of anyone who finds your looks appealing. With a second rank, you are Very Attractive, giving you a +5 circumstance bonus. This bonus does not count as part of your regular skill bonus in terms of the series power level, but also does not apply to people or situations which (in the GM’s opinion) would not be influenced by your appearance.\nWhile superheroes tend to be a fairly good-looking lot, this advantage is generally reserved for characters with particularly impressive looks.",
+        "ranked":true,
+        "maxrank":2,
+        "costperrank":1,
+        "mods":[]
     }
 ]
