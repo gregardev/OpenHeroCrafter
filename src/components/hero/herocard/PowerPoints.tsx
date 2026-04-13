@@ -8,9 +8,14 @@ export default function PowerPoints(){
 
     const [spentTotalPoints, setSpentTotalPoints] = useState(0);
     const [spentAbilityPoints, setSpentAbilityPoints] = useState(0);
+    const [spentDefensePoints, setSpentDefensePoints] = useState(0);
 
     function calculateTotalAvailablePowerPoints(){
         return (Number(activeHero.pl ?? 0) * 15) + (Number(activeHero.xp)?? 0);
+    }
+
+    function calculateSpentPointsTotal(){
+        return spentAbilityPoints + spentDefensePoints;
     }
 
     function calculateSpentAbilityPoints(){
@@ -28,23 +33,28 @@ export default function PowerPoints(){
         
     }
 
+    function calculateSpentDefensePoints(){
+        return ( Number(activeHero.rdod) +  Number(activeHero.rpar) + Number(activeHero.rfod) + Number(activeHero.rwid));
+    }   
+
     const [totalAvailablePowerPoints, setTotalAvailablePowerPoints] = useState(calculateTotalAvailablePowerPoints);
 
     useEffect(function(){
         setTotalAvailablePowerPoints(calculateTotalAvailablePowerPoints);
         setSpentAbilityPoints(calculateSpentAbilityPoints)
+        setSpentDefensePoints(calculateSpentDefensePoints)
     },[activeHero]);
 
     useEffect(function(){
-        setSpentTotalPoints(spentAbilityPoints);
-    },[spentAbilityPoints]);
+        setSpentTotalPoints(calculateSpentPointsTotal);
+    },[spentAbilityPoints, spentDefensePoints]);
 
     return(
         <Sheet
             variant="outlined"
         >
             <Typography>
-                Power Point Totals:{spentTotalPoints} = Abilities {spentAbilityPoints}. Total Avialble Power Points:{totalAvailablePowerPoints}
+                Power Point Totals:{spentTotalPoints} = Abilities {spentAbilityPoints} + Defenses {spentDefensePoints}. Total Avialble Power Points:{totalAvailablePowerPoints}
             </Typography>
         </Sheet>
     )

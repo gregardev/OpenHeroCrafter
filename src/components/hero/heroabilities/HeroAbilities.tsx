@@ -1,6 +1,7 @@
 import { Box, Card, Divider, Table, Typography } from "@mui/joy";
 import HeroAbilitiesTable from "./HeroAbilitiesTable";
 import HeroDefensesTable from "./HeroDefensesTable";
+import HeroMeasurementsTable from "./HeroMeasurementsTable";
 
 export default function HeroAbilities(){
 
@@ -182,6 +183,21 @@ export default function HeroAbilities(){
                             </tr>
                         </tbody>
                     </Table>
+                    <Typography color="primary" level="body-xs" sx={{width:'300px'}}>
+                        Beyond Human <br/>
+                        Although a rank of 7 is defined as “the peak of human achievement” in an ability on Table: Ability Benchmarks, a character with an ability rank greater than 7 isn’t necessarily “non-human,” merely superhuman in comparison to ordinary people. Many “normal human” characters in the comics have truly superhuman abilities, particularly mental abilities. A character can have a superhuman ability rank without necessarily being anything other than an amazingly talented, well-trained human being. The limits of what “normal” people can accomplish is up to the Gamemaster and depends very much on the style of the game. 
+                    </Typography>
+                </Card>
+                <Card
+                    sx={{m:1}}
+                    variant="soft"
+                    size="lg"
+                >
+                    <Typography>Measurments Table</Typography>
+                    <Typography color="primary" variant="outlined">Distance Rank = Time Rank + Speed Rank</Typography>
+                    <Typography color="primary" variant="outlined">Time Rank = Distance Rank – Speed Rank</Typography>
+                    <Typography color="primary" variant="outlined">Throwing Distance Rank = Strength Rank – Mass Rank</Typography>
+                    <HeroMeasurementsTable />
                 </Card>
             </Box>
         </Box>
