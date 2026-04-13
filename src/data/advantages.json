@@ -1,0 +1,16 @@
+[
+    {
+        "id":1,
+        "name":"Accurate Attack",
+        "type":"Combat",
+        "effect":"Increases the effectivness of Accurate Attack",
+        "description":"When you make an accurate attack maneuver you can take a penalty of up to –5 on the effect modifier of the attack and add the same number (up to +5) to your attack bonus."
+    },
+    {
+        "id":2,
+        "name":"Agile Feint",
+        "type":"Skill",
+        "effect":"Feint using Acrobatics skill or movement speed.",
+        "description":"You can use your Acrobatics bonus or movement speed rank in place of Deception to feint and trick in combat as if your skill bonus or speed rank were your Deception bonus. Your opponent opposes the attempt with Acrobatics or Insight (whichever is better)"
+    }
+]

@@ -1,7 +1,7 @@
 import { Box, Sheet, Typography } from '@mui/joy';
 import './Header.css';
 import ModeSwitcher from './ModeSwitcher';
-
+import HeaderSettings from './HeaderSettings';
 
 export default function Header(){
 
@@ -16,6 +16,7 @@ export default function Header(){
             <Typography sx={{p:1, fontFamily:'Comicy'}}>Open Hero Crafter</Typography>
             <Box sx={{flexGrow:1}}></Box>
             <ModeSwitcher />
+            <HeaderSettings />
         </Sheet>
     )
 

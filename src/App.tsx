@@ -31,8 +31,8 @@ function App() {
           <Tab>In Play</Tab>
           <Tab>Character Details</Tab>
           <Tab>Abilities and Defenses</Tab>
-          <Tab>Skills</Tab>
           <Tab>Advantages</Tab>
+          <Tab>Skills</Tab>
           <Tab>Equipment</Tab>
           <Tab>Powers</Tab>
           <Tab>Complications and Backstory</Tab>
@@ -55,10 +55,10 @@ function App() {
             <HeroAbilities />
           </TabPanel>
           <TabPanel value={3}>
-            <HeroSkills />
+            <HeroAdvantages />
           </TabPanel>
           <TabPanel value={4}>
-            <HeroAdvantages />
+            <HeroSkills />
           </TabPanel>
           <TabPanel value={5}>
             <HeroGear />

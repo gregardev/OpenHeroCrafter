@@ -1,3 +1,5 @@
+import type { Advantage } from "./advantage"
+
 export type IdType = "public" | "secret" | "none"
 
 export interface Hero {
@@ -64,6 +66,7 @@ export interface Hero {
     wid: number // stat
     rwid: number // rank
     
+    advantages: Advantage[]
 }
 
 export const defaultHero: Hero = {
@@ -106,6 +109,7 @@ export const defaultHero: Hero = {
     fod:0,
     rfod:0,
     wid:0,
-    rwid:0
+    rwid:0,
     
+    advantages:[]
 }

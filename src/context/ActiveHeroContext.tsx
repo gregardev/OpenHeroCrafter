@@ -36,6 +36,7 @@ export default function ActiveHeroContextProvider({children}:Props){
         <ActiveHeroContext.Provider 
             value={{
                 activeHero:activeHero, 
+                setActiveHero:setActiveHero,
                 changeActiveHeroAttrSTR: changeActiveHeroAttrSTR,
                 changeActiveHeroAttrNUM: changeActiveHeroAttrNUM,
                 changeActiveHeroAbility: changeActiveHeroAbility,
