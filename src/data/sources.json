@@ -1,10 +1,14 @@
 [
     {
-        "id":"core",
-        "label":"Hero Resources: Core"
+        "id": "core",
+        "label": "Hero Resources: Core"
     },
     {
-        "id":"space",
-        "label":"Hero Resources: Space"
+        "id": "space",
+        "label": "Hero Resources: Space"
+    },
+    {
+        "id": "teen",
+        "label": "Hero Resources: Teen"
     }
 ]

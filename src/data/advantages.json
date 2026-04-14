@@ -214,6 +214,16 @@
         "mods": []
     },
     {
+        "id": "col",
+        "name": "Cool",
+        "type": "Skill",
+        "effect": "Be Cool to vibe with teens",
+        "description": "You have a certain style and calm method to your actions that works on anyone under 20 years old. This gives you a +5 circumstance bonus on one Presence-related skill when rolling checks (Deception, Intimidation, Persuasion, or PRE-based Expertise) involving teens. Adults don’t “get it,” and are thus immune to your hip charm. Each rank in this advantage adds an additional Presence-related skill, and the bonus given can never give you an effective total skill bonus higher than the series’ power level limits.",
+        "source": "teen",
+        "ranked": true,
+        "mods": []
+    },
+    {
         "id": "cnt",
         "name": "Contacts",
         "type": "Skill",
@@ -265,6 +275,17 @@
         "mods": []
     },
     {
+        "id": "dis",
+        "name": "Disarming",
+        "type": "Fortune",
+        "effect": "You are so innocent and cute looking it is disarming.",
+        "description": "When your condition becomes dying you automatically stabilize on the following round without any need for a Stamina check, although further damage—such as a finishing attack—can still kill you.",
+        "source": "teen",
+        "ranked": true,
+        "maxrank": 10,
+        "mods": []
+    },
+    {
         "id": "eim",
         "name": "Eidetic Memory",
         "type": "General",
@@ -282,7 +303,6 @@
         "description": "You have 5 points per rank in this advantage to spend on equipment. This includes vehicles and headquarters. See Gadgets & Gear for details on equipment and its costs. Many heroes rely almost solely on Equipment in conjunction with their skills and other advantages.",
         "source": "core",
         "ranked": true,
-        "costperrank": 1,
         "mods": []
     },
     {
@@ -293,7 +313,6 @@
         "description": "You have a +2 circumstance bonus to Dodge resistance checks to avoid area effects. If you have 2 ranks in this advantage, your circumstance bonus increases to +5.",
         "source": "core",
         "ranked": true,
-        "costperrank": 1,
         "maxrank": 2,
         "mods": []
     },
@@ -405,7 +424,6 @@
         "description": "Increase your critical threat range with a particular attack (chosen when you acquire this advantage) by 1, allowing you to score a critical hit on a natural 19 or 20. Only a natural 20 is an automatic hit, however, and an attack that misses is not a critical. Each additional rank applies to a different attack or increases your threat range with an existing attack by one more, to a maximum threat range of 16-20 with 4 ranks.",
         "source": "core",
         "ranked": true,
-        "costperrank": 1,
         "mods": []
     },
     {
@@ -444,6 +462,7 @@
         "type": "Combat",
         "effect": "–5 circumstance penalty to escape from your holds.",
         "description": "Your grab attacks are particularly difficult to escape. Opponents you grab suffer a –5 circumstance penalty on checks to escape.",
+        "source": "core",
         "ranked": false,
         "mods": []
     },
@@ -454,7 +473,7 @@
         "effect": "+4 bonus to initiative checks per rank.",
         "description": "You have a +4 bonus to your initiative checks per rank in this advantage.",
         "ranked": true,
-        "costperrank": 1,
+        "source": "core",
         "mods": []
     },
     {
@@ -495,7 +514,7 @@
         "description": "When wielding an improvised close combat weapon—anything from a chair to a telephone pole or entire car—you use your Close Combat: Unarmed skill bonus for attack checks with the “weapon” rather than relying on your general Close Combat skill bonus. Additional ranks in this advantage give you a +1 bonus to Damage with improvised weapons per rank. Your maximum Damage bonus is still limited by power level, as usual.",
         "source": "core",
         "ranked": true,
-        "costperrank": 1,
+
         "mods": []
     },
     {
@@ -506,7 +525,7 @@
         "description": "You can inspire your allies to greatness. Once per scene, by taking a standard action and spending a heroic point, allies able to interact with you gain a +1 circumstance bonus per Inspire rank on all checks until the start of your next round, with a maximum bonus of +5. You do not gain the bonus, only your allies do. The inspiration bonus ignores power level limits, like other uses of heroic points. Multiple uses of Inspire do not stack, only the highest bonus applies.",
         "source": "core",
         "ranked": true,
-        "costperrank": 1,
+
         "maxrank": 5,
         "mods": []
     },
@@ -558,7 +577,7 @@
         "description": "You can speak and understand additional languages. With one rank in this advantage, you know an additional language. For each additional rank, you double your additional known languages: two at rank 2, four at rank 3, eight at rank 4, etc. So a character with Languages 7 is fluent in 64 languages! Characters are assumed to be fluent in any languages they know, including being able to read and write in them.",
         "source": "core",
         "ranked": true,
-        "costperrank": 1,
+
         "mods": []
     },
     {
@@ -579,7 +598,7 @@
         "description": "Once per round, you can choose to reroll a die roll, like spending a heroic point, including adding 10 to rerolls of 10 or less. You can do this a number of times per game session equal to your Luck rank, with a maximum rank of half the series power level (rounded down). Your Luck ranks refresh when your heroic points “reset” at the start of an adventure. The GM may choose to set a different limit on ranks in this advantage, depending on the series.",
         "source": "core",
         "ranked": true,
-        "costperrank": 1,
+
         "mods": []
     },
     {
@@ -590,7 +609,7 @@
         "description": "You have a follower or minion. This minion is an independent character with a Character point total of (advantage rank x 15). Minions are subject to the normal power level limits, and cannot have minions themselves. Your minions (if capable of independent thought) automatically have a helpful attitude toward you. They are subject to the normal rules for minions.\nMinions do not earn Character points. Instead, you must spend earned Character points to increase your rank in this advantage to improve the minion’s Character point total and traits. Minions also do not have Victory points. Any lost minions are replaced in between adventures with other followers with similar abilities at the Gamemaster’s discretion.",
         "source": "core",
         "ranked": true,
-        "costperrank": 1,
+
         "mods": []
     },
     {
@@ -796,19 +815,21 @@
         "mods": []
     },
     {
-        "id": 68,
+        "id": "uef",
         "name": "Ultimate Effort",
         "type": "Fortune",
-        "effect": "",
-        "description": "You can spend a Victory point on a particular check and treat the roll as a 20 (meaning you don’t need to roll the die at all, just apply a result of 20 to your modifier). This is not a natural 20, but is treated as a roll of 20 in all other respects. You choose the particular check the advantage applies to when you acquire it and the GM must approve it. You can take Ultimate Effort multiple times, each time, it applies to a different check. This advantage may not be used after you’ve rolled the die to determine if you succeed.",
+        "effect": "Spend a heroic point to get an effective 20 on a specific check.",
+        "description": "You can spend a Heroic point on a particular check and treat the roll as a 20 (meaning you don’t need to roll the die at all, just apply a result of 20 to your modifier). This is not a natural 20, but is treated as a roll of 20 in all other respects. You choose the particular check the advantage applies to when you acquire it and the GM must approve it. You can take Ultimate Effort multiple times, each time, it applies to a different check. This advantage may not be used after you’ve rolled the die to determine if you succeed.",
+        "source": "core",
         "ranked": false,
+        "repeatable": true,
         "mods": []
     },
     {
-        "id": "ule",
+        "id": "und",
         "name": "Uncanny Dodge",
         "type": "Combat",
-        "effect": "Spend a heroic point to get an effective 20 on a specific check.",
+        "effect": "Not vulnerable when surprised or caught off-guard.",
         "description": "You are especially attuned to danger. You are not vulnerable when surprised or otherwise caught off-guard. You are still made vulnerable by effects that limit your mobility.",
         "source": "core",
         "ranked": false,
