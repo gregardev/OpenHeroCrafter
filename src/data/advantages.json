@@ -91,6 +91,66 @@
         "mods":[]
     },
     {
+        "id":"ben:ali",
+        "name":"Benefit: Alternate Identity",
+        "type":"General",
+        "effect":"You have an alternate (legal) identity.",
+        "description":"You have an alternate identity, complete with legal paperwork (driver’s license, birth certificate, etc.). This is different from a costumed identity, which doesn’t necessarily have any special legal status (but may in some settings).",
+        "source":"core",
+        "ranked":false,
+        "mods":[]
+    },
+    {
+        "id":"ben:amb",
+        "name":"Benefit: Ambidexterity",
+        "type":"General",
+        "effect":"You are equally adept using either hand.",
+        "description":"You are equally adept using either hand, suffering no circumstance penalty for using your off-hand (as you don’t have one).",
+        "source":"core",
+        "ranked":false,
+        "mods":[]
+    },
+    {
+        "id":"ben:cip",
+        "name":"Benefit: Chipher",
+        "type":"General",
+        "effect":"Your true history is well hidden.",
+        "description":"Your true history is well hidden, making it difficult to dig up information about you. Investigation checks concerning you are made at a –5 circumstance penalty per rank in this benefit.",
+        "source":"core",
+        "ranked":true,
+        "mods":[]
+    },
+    {
+        "id":"ben:dii",
+        "name":"Benefit: Diplomatic Immunity",
+        "type":"General",
+        "effect":"You are have diplomatic protection.",
+        "description":"By dint of your diplomatic status, you cannot be prosecuted for crimes in nations other than your own. All another nation can do is deport you to your home nation.",
+        "source":"core",
+        "ranked":false,
+        "mods":[]
+    },
+    {
+        "id":"ben:scc",
+        "name":"Benefit: Security Clearance",
+        "type":"General",
+        "effect":"You have classified security clearance",
+        "description":"You have access to classified government information, installations, and possibly equipment and personnel.",
+        "source":"core",
+        "ranked":false,
+        "mods":[]
+    },
+    {
+        "id":"ben:stt",
+        "name":"Benefit: Status",
+        "type":"General",
+        "effect":"You have classified security clearance",
+        "description":"By virtue of birth or achievement, you have special status. Examples include nobility, knighthood, aristocracy, and so forth.",
+        "source":"core",
+        "ranked":false,
+        "mods":[]
+    },    
+    {
         "id":"cho",
         "name":"Chokehold",
         "type":"Combat",
