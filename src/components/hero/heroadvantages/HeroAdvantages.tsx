@@ -4,7 +4,12 @@ import advantages from "../../../data/advantages.json";
 export default function HeroAdvantages() {
     return (
         <Box>
-            <Typography>Advantages</Typography>
+            <Typography
+                level="h4"
+                sx={{ fontFamily: "Comicy", fontStyle: "italic" }}
+            >
+                Advantages
+            </Typography>
             <Divider />
             <Card sx={{ m: 1 }} variant="soft" size="lg">
                 <Table color="primary">

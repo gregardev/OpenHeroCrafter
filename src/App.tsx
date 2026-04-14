@@ -32,7 +32,7 @@ function App() {
             minWidth:250
           }}
         >
-          <Tab>In Play</Tab>
+          <Tab>Hero In Action</Tab>
           <Tab>Character Details</Tab>
           <Tab>Abilities and Defenses</Tab>
           <Tab>Advantages</Tab>

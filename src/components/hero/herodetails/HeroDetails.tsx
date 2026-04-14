@@ -1,20 +1,18 @@
 import { Box, Divider, Typography } from "@mui/joy";
 
-export default function HeroDetails(){
-
-
+export default function HeroDetails() {
     return (
         <Box>
-            <Typography>Hero Details</Typography>
+            <Typography
+                level="h4"
+                sx={{ fontFamily: "Comicy", fontStyle: "italic" }}
+            >
+                Hero Details
+            </Typography>
             <Divider />
-            <Box>
-                
-            </Box>
+            <Box></Box>
             <Divider />
-            <Box>
-                
-            </Box>
-
+            <Box></Box>
         </Box>
-    )
+    );
 }

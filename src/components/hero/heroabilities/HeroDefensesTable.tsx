@@ -46,16 +46,16 @@ export default function HeroDefensesTable(){
                         <td>{def.label}</td>
                         <td>
                             {def.key==='tou'?
-                            Boolean(activeHero[('d'+def.base)as keyof Hero])?0:getTotalDefense(def.key)
+                            activeHero[('d'+def.base)as keyof Hero]?0:getTotalDefense(def.key)
                             :
-                            Boolean(activeHero[('d'+def.base)as keyof Hero])?'---':getTotalDefense(def.key)
+                            activeHero[('d'+def.base)as keyof Hero]?'---':getTotalDefense(def.key)
                             }
                         </td>
                         <td>
                             {def.key==='tou'?
-                            Boolean(activeHero[('d'+def.base)as keyof Hero])?0:(activeHero[def.base as keyof Hero] ?? 0) as number
+                            activeHero[('d'+def.base)as keyof Hero]?0:(activeHero[def.base as keyof Hero] ?? 0) as number
                             :
-                            Boolean(activeHero[('d'+def.base)as keyof Hero])?'---':(activeHero[def.base as keyof Hero] ?? 0) as string | number
+                            activeHero[('d'+def.base)as keyof Hero]?'---':(activeHero[def.base as keyof Hero] ?? 0) as string | number
                             }
                         </td>
                         <td>

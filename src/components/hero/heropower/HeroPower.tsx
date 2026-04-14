@@ -1,11 +1,15 @@
 import { Box, Divider, Typography } from "@mui/joy";
 
-export default function HeroPower(){
-
-    return(
+export default function HeroPower() {
+    return (
         <Box>
-            <Typography>Powers</Typography>
+            <Typography
+                level="h4"
+                sx={{ fontFamily: "Comicy", fontStyle: "italic" }}
+            >
+                Powers
+            </Typography>
             <Divider />
         </Box>
-    )
+    );
 }
