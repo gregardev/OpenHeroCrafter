@@ -1,0 +1,10 @@
+[
+    {
+        "id":"core",
+        "label":"Hero Resources: Core"
+    },
+    {
+        "id":"space",
+        "label":"Hero Resources: Space"
+    }
+]
