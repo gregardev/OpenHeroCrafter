@@ -279,7 +279,7 @@
         "name": "Disarming",
         "type": "Fortune",
         "effect": "You are so innocent and cute looking it is disarming.",
-        "description": "When your condition becomes dying you automatically stabilize on the following round without any need for a Stamina check, although further damage—such as a finishing attack—can still kill you.",
+        "description": "It started with Mom and Dad, the way you could wrap them around your little finger with a doleful puppy dog stare. You’re cute and innocent looking, and when you want to, you can make villains really nervous about hitting you. Oh they’ll blast you if they have to—they are evil after all—but they’re likely to pull their punch because attacking you is like blasting away at Thumper or a Tribble.\n By spending a hero point, you can direct this innocent charm at one villain, forcing the miscreant to make a Will save (DC 10 + twice your ranks in Disarming). If the villain fails, he still attacks, but he “pulls” his punch, reducing his attack’s rank by 2 for one degree of failure, 5 for two degrees of failure, or 10 for three or more degrees of failure. The effect lasts until you attack and hurt the villain. If the save succeeds or you attack and hurt the villain, he cannot be affected by the Disarming advantage for the rest of that encounter.",
         "source": "teen",
         "ranked": true,
         "maxrank": 10,
@@ -404,6 +404,17 @@
         "description": "You can hide without any need for a Deception or Intimidation check or any sort of diversion, and without penalty to your Stealth check. You’re literally there one moment, and gone the next. You must still have some form of cover or concealment within range of your normal movement speed in order to hide.",
         "source": "core",
         "ranked": false,
+        "mods": []
+    },
+    {
+        "id": "hlb",
+        "name": "Holding Back",
+        "type": "Fortune",
+        "effect": "Hold back your true terrifying power.",
+        "description": "Holding Back means you possess a lot more power than you’re letting on, but you won’t use it out of a legitimate fear. Can you shatter buildings with a thoughtless word? Can you tap into an endless pit of darkness to fuel yourself? Can you surrender to an indiscriminate battle-fury that turns you into a lethal tornado of death? You can tap into and wield abilities above and beyond the series’ power levels. In fact, the current power levels are holding you back from going full-bore. This is a dangerous ploy, however, and a slip could prove worse than the threat facing you now.\n With Holding Back, you must spend a hero point and two conditions must be met before you can access this untapped reserve. Over half the team must be incapacitated for you to consider making this sacrifice, or many innocent lives should be at stake (possibly including your own), and you must make a Will resistance check with a DC of 10 + your Will defense to overcome your own years of self-deprivation training. You get a +1 bonus to the roll for each rank in this advantage after the first (to a maximum of +5 with 6 ranks). If both conditions are met, you have access to greater powers for that encounter. When you overcome your mental blocks and become more powerful, your power level increases by 4 and you gain 60 points to spend on your traits (during teen hero creation, make two character sheets for the normal hero and the tricked-out, really dangerous hero; this prevents you from slowing the flow of combat).\nThe bad in all this is that once you unleash your full potential, there’s a price to pay. You suffer a complication chosen by the GM for unleashing your full power, for which you do not receive a hero point award. See the following section for some possibilities.\nSAMPLE COMPLICATIONS:\nNote that in any of these instances, you can spend a hero point to prevent your powers or actions from killing anyone.\n\n- Berserk: You lose self-control and enter a feral state. Intellect drops to -4 and until subdued, you’re enraged, as if you have the Temper complication. This may even happen at the beginning of combat, with your principle target being the threat that started the combat.\n- Host:Your powers exist because you’re host to some terrible, evil entity. It might be extraterrestrial, extra-dimensional, or magical, but unleashing its power means it temporarily surfaces and assumes control of your body. It may be hell-bent on destruction, or perhaps it quietly goes about some secret agenda while your conscious is unconscious. You wake up, not knowing what it’s done or who it’s killed, but dreading the impending truth nonetheless. Regardless, regaining control of your body may happen automatically after a few hours, it may happen at dawn or dusk, or it may happen once your body needs rest and falls asleep. It’s up to you and the Gamemaster to decide\n- Hunted:Somebody out there is looking for you, whether it’s the corporation that gave you powers, the mad scientist who built you, or your demon daddy looking to open a gateway through you. Either way, it’s bad news. By unleashing your powers at full bore, you have given your hunters a way to locate you. They’ll find you and attack you to get you back. If you’re lucky, you have a couple of hours to prepare. If you’re unlucky, they’re already on your back. Gamemasters should create this nemesis in advance and keep them ready for use.\n - Inert: You reach great heights in your power, only to crash even harder. With this complication, you shut down, lose cohesion, become a statue, or fall into a coma. Essentially, you are out of commission. You recover after an hour.\n- Monstrosity: Your power turns you into a monster for several hours. And no, it isn’t some cute and fuzzy G-Rated critter, but something exceedingly gross or horrifying, something that would raise an eyebrow on H.P. Lovecraft. It’s so bad, cops will shoot at you, and the armed forces will be called in to deal with you as a threat. Even the people who know and love you won’t be the same. For a week after you revert back, you suffer a –5 circumstance penalty on all Presence related rolls when dealing with anyone who’s seen you as the beast.\n- Power Unleashed: Your power is explosive, and unleashing it is like a meltdown. If you fail to contain it, your most offensive power lashes out randomly at full force until you’re rendered unconscious.",
+        "source": "teen",
+        "ranked": true,
+        "maxrank":6,
         "mods": []
     },
     {
@@ -823,6 +834,16 @@
         "source": "core",
         "ranked": false,
         "repeatable": true,
+        "mods": []
+    },
+    {
+        "id": "unp",
+        "name": "Untapped Potential",
+        "type": "Fortune",
+        "effect": "Increase a power's rank by 3 when using extra effort",
+        "description": "Folks expect you to grow into your powers eventually, but you’re special; you haven’t even begun to tap into the full extent of your abilities. With Untapped Potential, you can push your powers beyond their current limits and touch upon that greatness for a short time. When you use extra effort, you can increase a power by 3 ranks rather than 2.",
+        "source": "teen",
+        "ranked": false,
         "mods": []
     },
     {
