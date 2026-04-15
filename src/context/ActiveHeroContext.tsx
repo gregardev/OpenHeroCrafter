@@ -10,26 +10,97 @@ type Props = {
 export const ActiveHeroContext = createContext<ActiveHeroContextValue | null>(null);
 
 export default function ActiveHeroContextProvider({children}:Props){
-    const [activeHero, setActiveHero ] = useSaveHeroToLocalStorage({
-        key:'OpenHeroCrafter-MNM3E-activehero',
-        hero:{...defaultHero} 
-    })
-
+    const [activeHero, setActiveHero] = useSaveHeroToLocalStorage({
+        key: 'OpenHeroCrafter-MNM3E-activehero',
+        hero: { ...defaultHero }
+    });
     
+    function calculateChanges(trait: string, newVal: number) {
+        let changes = { [trait]: newVal };
+        
+        switch (trait) {
+            case 'rstr':
+                changes = { ...changes, str: newVal };
+                break;
+            case 'rsta':
+                // modify toughness and Fort Defense
+                changes = { ...changes,sta:newVal, tou: newVal, fod:(newVal + activeHero.rfod) };
+                break;
+            
+            case 'ragi':
+                // modify Dodge Defense
+                changes = {...changes, agi:newVal, dod:(newVal + activeHero.rdod)}
+                break;
+            
+            case 'rdex':
+                changes = { ...changes, dex: newVal };
+                break;
+            
+            case 'rfgt':
+                // modify Parry 
+                changes = { ...changes, fgt: newVal, par: (newVal + activeHero.rpar) }
+                break;
+            
+            case 'rint':
+                changes = { ...changes, int: newVal };
+                break;
+            
+            case 'rawe':
+                // modify Awereness
+                changes = { ...changes, awe:newVal, wid:(newVal + activeHero.rwid) };
+                break;
+            
+            case 'rpre':
+                changes = { ...changes, pre: newVal };
+                break;
+            
+            // Defences 
+            case 'rdod':
+                changes = { ...changes, dod: (activeHero.agi + newVal) };
+                break;
+            
+            case 'rpar':
+                changes = { ...changes, par: (activeHero.fgt + newVal) };
+                break;
+            
+            case 'rfod':
+                changes = { ...changes, fod: (activeHero.sta + newVal) };
+                break;
+            
+            case 'rwid':
+                changes = { ...changes, wid: (activeHero.awe + newVal) };
+        }
+        
+        return changes;
+    }
+
     function changeActiveHeroAttrSTR(field:string, newVal:string){
         setActiveHero({...activeHero, [field]:newVal});
     }
 
-    function changeActiveHeroAttrNUM(field:string, newVal:number){
-        setActiveHero({...activeHero, [field]:newVal});
-    }
-
-    function changeActiveHeroAbility(ability:string, newVal:number){
-        setActiveHero({...activeHero, ['r'+ability]: newVal, [ability]:newVal});
+    function changeActiveHeroAttrNUM(field: string, newVal: number) {
+        const changes = calculateChanges(field, newVal); 
+        setActiveHero({ ...activeHero, ...changes});
     }
 
     function changeActiveHeroAbilityDisable(ability:string, newVal:boolean){
-        setActiveHero({...activeHero, ['r'+ability]: 0, [ability]:0, ['d'+ability]:newVal});
+        let changes = {};
+        switch (ability) {
+            case 'sta':
+                changes = calculateChanges('rfod', 0);
+                break;
+            case 'agi':
+                changes = calculateChanges('rdod', 0);
+                break;
+            case 'fgt':
+                changes = calculateChanges('rpar', 0);
+                break;
+            case 'awe':
+                changes = calculateChanges('rawe', 0);
+        }
+        const abchanges = calculateChanges('r'+ability, 0);
+        changes = {...changes, ...abchanges}
+        setActiveHero({ ...activeHero, ...changes, ['d' + ability]: newVal });
     }
 
     return (
@@ -39,7 +110,6 @@ export default function ActiveHeroContextProvider({children}:Props){
                 setActiveHero:setActiveHero,
                 changeActiveHeroAttrSTR: changeActiveHeroAttrSTR,
                 changeActiveHeroAttrNUM: changeActiveHeroAttrNUM,
-                changeActiveHeroAbility: changeActiveHeroAbility,
                 changeActiveHeroAbilityDisable: changeActiveHeroAbilityDisable
             }}
         >

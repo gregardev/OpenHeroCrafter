@@ -17,7 +17,7 @@ const abilities = [
 export default function HeroAbilitiesTable() {
     const {
         activeHero,
-        changeActiveHeroAbility,
+        changeActiveHeroAttrNUM,
         changeActiveHeroAbilityDisable,
     } = useActiveHero();
 
@@ -56,8 +56,8 @@ export default function HeroAbilitiesTable() {
                                     activeHero[("r" + ab.key) as keyof Hero],
                                 )}
                                 onChange={(e) =>
-                                    changeActiveHeroAbility(
-                                        ab.key,
+                                    changeActiveHeroAttrNUM(
+                                        "r"+ab.key,
                                         Number(e.target.value),
                                     )
                                 }

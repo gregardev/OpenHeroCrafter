@@ -14,18 +14,11 @@ const defenses = [
 export default function HeroDefensesTable(){
     const {activeHero, changeActiveHeroAttrNUM} = useActiveHero();
 
-    function getTotalDefense(key:string){
-
-        const def = defenses.find(def=>def.key === key)
-
-        return Number((activeHero[('r'+key) as keyof Hero])?? 0)+Number((activeHero[('r'+def?.base) as keyof Hero])?? 0)
-    }
-
     function checkPowerLimit(key:string, pairs:string[]){
 
-        const keyDefVal = getTotalDefense(key)
+        const keyDefVal = activeHero[key as keyof Hero] as number;
         return pairs.some((pair)=>{
-            return keyDefVal + getTotalDefense(pair) > (activeHero.pl * 2)
+            return keyDefVal + (activeHero[pair as keyof Hero] as number) > (activeHero.pl * 2)
         });
     }
 
@@ -46,16 +39,16 @@ export default function HeroDefensesTable(){
                         <td>{def.label}</td>
                         <td>
                             {def.key==='tou'?
-                            activeHero[('d'+def.base)as keyof Hero]?0:getTotalDefense(def.key)
+                            activeHero.dsta?0:activeHero.tou
                             :
-                            activeHero[('d'+def.base)as keyof Hero]?'---':getTotalDefense(def.key)
+                            activeHero[('d'+def.base)as keyof Hero]?'---':activeHero[def.key as keyof Hero] as number
                             }
                         </td>
                         <td>
                             {def.key==='tou'?
                             activeHero[('d'+def.base)as keyof Hero]?0:(activeHero[def.base as keyof Hero] ?? 0) as number
                             :
-                            activeHero[('d'+def.base)as keyof Hero]?'---':(activeHero[def.base as keyof Hero] ?? 0) as string | number
+                            activeHero[('d'+def.base)as keyof Hero]?'---':(activeHero[def.base as keyof Hero] ?? 0) as number
                             }
                         </td>
                         <td>
@@ -64,6 +57,7 @@ export default function HeroDefensesTable(){
                                 :
                                 <Input 
                                     type="number" 
+                                    disabled={activeHero[('d'+def.base) as keyof Hero] as boolean}
                                     value={Number(activeHero[('r'+def.key) as keyof Hero])}
                                     onChange={(e)=>changeActiveHeroAttrNUM('r'+def.key,Number(e.target.value))}
                                 />
