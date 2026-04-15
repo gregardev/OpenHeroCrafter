@@ -5,6 +5,7 @@ import {
     Divider,
     Sheet,
     Stack,
+    Table,
     Typography,
     type ColorPaletteProp,
 } from "@mui/joy";
@@ -25,7 +26,7 @@ const abilities = [
 ];
 
 const defenses = [
-    { label: "Dodge", id: "dod" },
+    { label: "Dodge", id: "dod", base:'agi' },
     { label: "Parry", id: "par" },
     { label: "Fortitude", id: "fod" },
     { label: "Will", id: "wid" }
@@ -123,28 +124,66 @@ export default function HeroPlay() {
                     </Typography>
                 </Sheet>
             </Stack>
-            <Card size="lg" variant="soft" sx={{ m: 1 }}>
-                <Typography sx={{ fontFamily: "Comicy", fontStyle: "italic" }}>
-                    Defenses
-                </Typography>
-                <Divider />
-                <Box>
-                    <Stack>
-                        {defenses.map(def => (
-                            <Sheet
-                                color="primary"
-                                variant="outlined"
-                            >
-                                <Stack
-                                    direction="row"
-                                >
-                                    
-                                </Stack>
-                            </Sheet>
-                        ))}
-                    </Stack>
-                </Box>
-            </Card>
+            <Stack
+                direction="row"
+            >
+                <Card size="lg" variant="soft" sx={{ m: 1, width:400 }}>
+                    <Typography sx={{ fontFamily: "Comicy", fontStyle: "italic" }}>
+                        Defenses
+                    </Typography>
+                    <Divider />
+                    
+                    <Table color="primary">
+                        <thead>
+                            <th>Defense</th>
+                            <th>DC</th>
+                            <th>Mod</th>
+                        </thead>
+                        <tbody>
+                            {defenses.map(def => (
+                                <tr>
+                                    <td>
+                                        {def.label}
+                                    </td>
+                                    <td>
+                                        {((activeHero[def.id as keyof Hero] as number) ?? 0) + 10}
+                                    </td>
+                                    <td>
+                                        <Button onClick={() => roll({
+                                            modifier: ((activeHero[def.id as keyof Hero] as number) ?? 0),
+                                            label:def.label
+                                        })}>
+                                            <Typography level="h4">
+                                                {((activeHero[def.id as keyof Hero] as number) ?? 0)}
+                                            </Typography>
+                                        </Button>
+                                    </td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </Table>
+                </Card>
+                <Card size="lg" variant="soft" sx={{ m: 1, width:400 }}>
+                    <Typography level="h4" sx={{ fontFamily: "Comicy", fontStyle: "italic" }}>
+                        Combat
+                    </Typography>
+                    <Divider />
+                    <Typography  sx={{ fontFamily: "Comicy", fontStyle: "italic" }}>
+                        Attacks
+                    </Typography>
+                    <Divider />
+                    <Typography  sx={{ fontFamily: "Comicy", fontStyle: "italic" }}>
+                        Hits
+                    </Typography>
+                    <Divider />
+                    <Button onClick={() => roll({
+                        modifier: activeHero.tou,
+                        label:"Toughness"
+                    })}>
+                        <Typography level="h4">Toughness {activeHero.tou}</Typography>
+                    </Button>
+                </Card>
+            </Stack>
         </Box>
     );
 }
