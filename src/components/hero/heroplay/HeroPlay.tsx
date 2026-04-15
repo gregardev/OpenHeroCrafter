@@ -129,7 +129,20 @@ export default function HeroPlay() {
                 </Typography>
                 <Divider />
                 <Box>
-                    
+                    <Stack>
+                        {defenses.map(def => (
+                            <Sheet
+                                color="primary"
+                                variant="outlined"
+                            >
+                                <Stack
+                                    direction="row"
+                                >
+                                    
+                                </Stack>
+                            </Sheet>
+                        ))}
+                    </Stack>
                 </Box>
             </Card>
         </Box>

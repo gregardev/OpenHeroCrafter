@@ -69,6 +69,7 @@ export default function ActiveHeroContextProvider({children}:Props){
             
             case 'rwid':
                 changes = { ...changes, wid: (activeHero.awe + newVal) };
+                break;
         }
         
         return changes;
