@@ -731,6 +731,16 @@
         "mods": []
     },
     {
+        "id": "rta",
+        "name": "Reviving Team Attack",
+        "type": "Combat",
+        "effect": "Use your team attack to cure a condition from an ally.",
+        "description": "Your team contributions lend comfort and support, providing your allies with a second wind. When you successfully contribute to a team attack, rather than contributing a circumstance bonus to the attack’s rank, you can choose to remove one of the following conditions from a character contributing to the attack: dazed, fatigued, or stunned. You can remove one condition per degree of success on your team attack check and can choose different conditions or characters with each.",
+        "source": "team",
+        "ranked": false,
+        "mods": []
+    },
+    {
         "id": "rit",
         "name": "Ritualist",
         "type": "Skill",
@@ -801,6 +811,16 @@
         "mods": []
     },
     {
+        "id": "tat",
+        "name": "Tactical Training",
+        "type": "Combat",
+        "effect": "Trained on certain tactics, and can train others with these tactics.",
+        "description": "Thanks to tactical knowledge and hours of training alongside your teammates, you work together in combat like a well-oiled machine. You may perform the Feinting, Innuendo, and Tricking functions of the Deception skill and the Demoralizing function of the Intimidation skill using your Expertise (tactics) skill rank. You may only share this benefit with other characters (such as sending coded messages with Innuendo or transferring the benefits of a feint using the Set-up Advantage) if those characters also have the Tactical Training Advantage and you have trained with them for at least a few hours.",
+        "source": "team",
+        "ranked": false,
+        "mods": []
+    },
+    {
         "id": "tkd",
         "name": "Takedown",
         "type": "Combat",
@@ -818,6 +838,16 @@
         "effect": "Use Deception to demoralize in combat.",
         "description": "You can demoralize an opponent with Deception rather than Intimidation, disparaging and undermining confidence rather than threatening. Targets resist using Deception, Insight, or Will defense.",
         "source": "core",
+        "ranked": false,
+        "mods": []
+    },
+    {
+        "id": "tcd",
+        "name": "Team Code",
+        "type": "Skill",
+        "effect": "Develop a secret communications code with teammate that have this advantage.",
+        "description": "You and any other members of a team with this Advantage share a knowledge of various code words, pre planned maneuvers, and so forth, allowing you and your teammates to quickly and easily communicate tactical plans without being overheard. In play, you can make tactical plans with other players as a free action and sum up those plans as a code word or phrase like “Maneuver 12” or “Orbital Strike.” You also gain a +5 circumstance bonus for checks to Innuendo to communicate tactical information in general with other members of your team.",
+        "source": "team",
         "ranked": false,
         "mods": []
     },
@@ -893,6 +923,16 @@
         "mods": []
     },
     {
+        "id": "vta",
+        "name": "Variable Team Attack",
+        "type": "Combat",
+        "effect": "Vary your Team Attacks.",
+        "description": "When you successfully contribute to a team attack, rather than contributing a circumstance bonus to the attack’s rank, you can apply the benefits of a 1-point Variable Descriptor extra to the attack. If your coordination test for the team attack has three or more degrees of success, you can apply a 2-point Variable Descriptor to the attack.",
+        "source": "team",
+        "ranked": false,
+        "mods": []
+    },
+    {
         "id": "wpb",
         "name": "Weapon Bind",
         "type": "Combat",
@@ -910,6 +950,16 @@
         "description": "If you take the defend action and successfully defend against a close weapon attack, you can make an attack against the attacker’s weapon immediately as a reaction. This requires an attack check and inflicts normal damage to the weapon if it hits.",
         "source": "core",
         "ranked": false,
+        "mods": []
+    },
+    {
+        "id": "wle",
+        "name": "Well-Equiped",
+        "type": "General",
+        "effect": "Be well equipped and prepared for almost any situation.",
+        "description": "You are well equipped and prepared for almost any situation. For each rank in this Advantage, you can have a single item of equipment on hand once per adventure. If you are a member of a team, you can share the benefits of this Advantage to allow a teammate to have an item of equipment on hand instead, implying that you help equip and supply your friends.",
+        "source": "team",
+        "ranked": true,
         "mods": []
     },
     {
