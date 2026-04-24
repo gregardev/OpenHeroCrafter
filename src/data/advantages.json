@@ -60,6 +60,16 @@
         "mods": []
     },
     {
+        "id": "ast",
+        "name": "Assist",
+        "type": "General",
+        "effect": "Use a personal advantage to another teamate.",
+        "description": "When you take Assist, choose an Advantage that normally grants a circumstance bonus. You do not gain this Advantage’s effects, but once per round, as a free action, you can grant that Advantage’s benefit to an ally able to interact with you. If you have the Advantage normally, then you also gain its benefit normally. Think of the Assist Advantage as an Affects Only Others version of the chosen Advantage. If the subject of the Assist Advantage already has an equivalent circumstance bonus, the Assist improves it up to a +5 bonus, after which it has no effect. So a subject with Evasion who is given an Evasion Assist gains the benefits of Improved Evasion: a +5 circumstance bonus. Advantages from the Mutants & Masterminds Deluxe Hero’s Handbook eligible for this Advantage are: Eidetic Memory, Evasion, Favored Environment, Favored Foe, Improved Aim, and Teamwork. At the Gamemaster’s discretion, Assist can be extended to provide the benefits of any Advantage not limited by Power Level, so long as the player provides a suitable in-game explanation for sharing the benefit. In this case, the assisted ally must spend any heroic points necessary for the Advantage.",
+        "source": "team",
+        "ranked": false,
+        "mods": []
+    },
+    {
         "id": "att",
         "name": "Attractive",
         "type": "Skill",
@@ -279,7 +289,7 @@
         "name": "Disarming",
         "type": "Fortune",
         "effect": "You are so innocent and cute looking it is disarming.",
-        "description": "It started with Mom and Dad, the way you could wrap them around your little finger with a doleful puppy dog stare. You’re cute and innocent looking, and when you want to, you can make villains really nervous about hitting you. Oh they’ll blast you if they have to—they are evil after all—but they’re likely to pull their punch because attacking you is like blasting away at Thumper or a Tribble.\n By spending a hero point, you can direct this innocent charm at one villain, forcing the miscreant to make a Will save (DC 10 + twice your ranks in Disarming). If the villain fails, he still attacks, but he “pulls” his punch, reducing his attack’s rank by 2 for one degree of failure, 5 for two degrees of failure, or 10 for three or more degrees of failure. The effect lasts until you attack and hurt the villain. If the save succeeds or you attack and hurt the villain, he cannot be affected by the Disarming advantage for the rest of that encounter.",
+        "description": "It started with Mom and Dad, the way you could wrap them around your little finger with a doleful puppy dog stare. You’re cute and innocent looking, and when you want to, you can make villains really nervous about hitting you. Oh they’ll blast you if they have to—they are evil after all—but they’re likely to pull their punch because attacking you is like blasting away at Thumper or a Tribble.\n By spending a heroic point, you can direct this innocent charm at one villain, forcing the miscreant to make a Will save (DC 10 + twice your ranks in Disarming). If the villain fails, he still attacks, but he “pulls” his punch, reducing his attack’s rank by 2 for one degree of failure, 5 for two degrees of failure, or 10 for three or more degrees of failure. The effect lasts until you attack and hurt the villain. If the save succeeds or you attack and hurt the villain, he cannot be affected by the Disarming advantage for the rest of that encounter.",
         "source": "teen",
         "ranked": true,
         "maxrank": 10,
@@ -397,6 +407,16 @@
         "mods": []
     },
     {
+        "id": "gui",
+        "name": "Guidance",
+        "type": "Fortune",
+        "effect": "You can cheer on or advise allies toward victory.",
+        "description": "You can cheer on or advise allies toward victory. When you spend a Heroic Point and take a free action to offer guidance, one ally of your choice who can communicate with you gains a single Advantage of your choice until the end of your next turn. This otherwise functions like the Heroic Feat benefit of a Heroic Point",
+        "source": "team",
+        "ranked": false,
+        "mods": []
+    },
+    {
         "id": "hps",
         "name": "Hide in Plain Sight",
         "type": "Skill",
@@ -411,7 +431,7 @@
         "name": "Holding Back",
         "type": "Fortune",
         "effect": "Hold back your true terrifying power.",
-        "description": "Holding Back means you possess a lot more power than you’re letting on, but you won’t use it out of a legitimate fear. Can you shatter buildings with a thoughtless word? Can you tap into an endless pit of darkness to fuel yourself? Can you surrender to an indiscriminate battle-fury that turns you into a lethal tornado of death? You can tap into and wield abilities above and beyond the series’ power levels. In fact, the current power levels are holding you back from going full-bore. This is a dangerous ploy, however, and a slip could prove worse than the threat facing you now.\n With Holding Back, you must spend a hero point and two conditions must be met before you can access this untapped reserve. Over half the team must be incapacitated for you to consider making this sacrifice, or many innocent lives should be at stake (possibly including your own), and you must make a Will resistance check with a DC of 10 + your Will defense to overcome your own years of self-deprivation training. You get a +1 bonus to the roll for each rank in this advantage after the first (to a maximum of +5 with 6 ranks). If both conditions are met, you have access to greater powers for that encounter. When you overcome your mental blocks and become more powerful, your power level increases by 4 and you gain 60 points to spend on your traits (during teen hero creation, make two character sheets for the normal hero and the tricked-out, really dangerous hero; this prevents you from slowing the flow of combat).\nThe bad in all this is that once you unleash your full potential, there’s a price to pay. You suffer a complication chosen by the GM for unleashing your full power, for which you do not receive a hero point award. See the following section for some possibilities.\nSAMPLE COMPLICATIONS:\nNote that in any of these instances, you can spend a hero point to prevent your powers or actions from killing anyone.\n\n- Berserk: You lose self-control and enter a feral state. Intellect drops to -4 and until subdued, you’re enraged, as if you have the Temper complication. This may even happen at the beginning of combat, with your principle target being the threat that started the combat.\n- Host:Your powers exist because you’re host to some terrible, evil entity. It might be extraterrestrial, extra-dimensional, or magical, but unleashing its power means it temporarily surfaces and assumes control of your body. It may be hell-bent on destruction, or perhaps it quietly goes about some secret agenda while your conscious is unconscious. You wake up, not knowing what it’s done or who it’s killed, but dreading the impending truth nonetheless. Regardless, regaining control of your body may happen automatically after a few hours, it may happen at dawn or dusk, or it may happen once your body needs rest and falls asleep. It’s up to you and the Gamemaster to decide\n- Hunted:Somebody out there is looking for you, whether it’s the corporation that gave you powers, the mad scientist who built you, or your demon daddy looking to open a gateway through you. Either way, it’s bad news. By unleashing your powers at full bore, you have given your hunters a way to locate you. They’ll find you and attack you to get you back. If you’re lucky, you have a couple of hours to prepare. If you’re unlucky, they’re already on your back. Gamemasters should create this nemesis in advance and keep them ready for use.\n - Inert: You reach great heights in your power, only to crash even harder. With this complication, you shut down, lose cohesion, become a statue, or fall into a coma. Essentially, you are out of commission. You recover after an hour.\n- Monstrosity: Your power turns you into a monster for several hours. And no, it isn’t some cute and fuzzy G-Rated critter, but something exceedingly gross or horrifying, something that would raise an eyebrow on H.P. Lovecraft. It’s so bad, cops will shoot at you, and the armed forces will be called in to deal with you as a threat. Even the people who know and love you won’t be the same. For a week after you revert back, you suffer a –5 circumstance penalty on all Presence related rolls when dealing with anyone who’s seen you as the beast.\n- Power Unleashed: Your power is explosive, and unleashing it is like a meltdown. If you fail to contain it, your most offensive power lashes out randomly at full force until you’re rendered unconscious.",
+        "description": "Holding Back means you possess a lot more power than you’re letting on, but you won’t use it out of a legitimate fear. Can you shatter buildings with a thoughtless word? Can you tap into an endless pit of darkness to fuel yourself? Can you surrender to an indiscriminate battle-fury that turns you into a lethal tornado of death? You can tap into and wield abilities above and beyond the series’ power levels. In fact, the current power levels are holding you back from going full-bore. This is a dangerous ploy, however, and a slip could prove worse than the threat facing you now.\n With Holding Back, you must spend a heroic point and two conditions must be met before you can access this untapped reserve. Over half the team must be incapacitated for you to consider making this sacrifice, or many innocent lives should be at stake (possibly including your own), and you must make a Will resistance check with a DC of 10 + your Will defense to overcome your own years of self-deprivation training. You get a +1 bonus to the roll for each rank in this advantage after the first (to a maximum of +5 with 6 ranks). If both conditions are met, you have access to greater powers for that encounter. When you overcome your mental blocks and become more powerful, your power level increases by 4 and you gain 60 points to spend on your traits (during teen hero creation, make two character sheets for the normal hero and the tricked-out, really dangerous hero; this prevents you from slowing the flow of combat).\nThe bad in all this is that once you unleash your full potential, there’s a price to pay. You suffer a complication chosen by the GM for unleashing your full power, for which you do not receive a heroic point award. See the following section for some possibilities.\nSAMPLE COMPLICATIONS:\nNote that in any of these instances, you can spend a heroic point to prevent your powers or actions from killing anyone.\n\n- Berserk: You lose self-control and enter a feral state. Intellect drops to -4 and until subdued, you’re enraged, as if you have the Temper complication. This may even happen at the beginning of combat, with your principle target being the threat that started the combat.\n- Host:Your powers exist because you’re host to some terrible, evil entity. It might be extraterrestrial, extra-dimensional, or magical, but unleashing its power means it temporarily surfaces and assumes control of your body. It may be hell-bent on destruction, or perhaps it quietly goes about some secret agenda while your conscious is unconscious. You wake up, not knowing what it’s done or who it’s killed, but dreading the impending truth nonetheless. Regardless, regaining control of your body may happen automatically after a few hours, it may happen at dawn or dusk, or it may happen once your body needs rest and falls asleep. It’s up to you and the Gamemaster to decide\n- Hunted:Somebody out there is looking for you, whether it’s the corporation that gave you powers, the mad scientist who built you, or your demon daddy looking to open a gateway through you. Either way, it’s bad news. By unleashing your powers at full bore, you have given your hunters a way to locate you. They’ll find you and attack you to get you back. If you’re lucky, you have a couple of hours to prepare. If you’re unlucky, they’re already on your back. Gamemasters should create this nemesis in advance and keep them ready for use.\n - Inert: You reach great heights in your power, only to crash even harder. With this complication, you shut down, lose cohesion, become a statue, or fall into a coma. Essentially, you are out of commission. You recover after an hour.\n- Monstrosity: Your power turns you into a monster for several hours. And no, it isn’t some cute and fuzzy G-Rated critter, but something exceedingly gross or horrifying, something that would raise an eyebrow on H.P. Lovecraft. It’s so bad, cops will shoot at you, and the armed forces will be called in to deal with you as a threat. Even the people who know and love you won’t be the same. For a week after you revert back, you suffer a –5 circumstance penalty on all Presence related rolls when dealing with anyone who’s seen you as the beast.\n- Power Unleashed: Your power is explosive, and unleashing it is like a meltdown. If you fail to contain it, your most offensive power lashes out randomly at full force until you’re rendered unconscious.",
         "source": "teen",
         "ranked": true,
         "maxrank":6,
@@ -498,6 +518,27 @@
         "mods": []
     },
     {
+        "id": "ita",
+        "name":"Improved Team Attack",
+        "type":"Combat",
+        "effect":"You can contribute to a team attack easier",
+        "description":"You can contribute to a team attack manouver even if your attack’s resistance is not within 5 ranks of the other attacks. If you have two ranks of this Advantage, your attack does not even have to have the same effect as the other attacks, although the combined team attack still has the effect of the main attack.",
+        "source":"team",
+        "ranked":true,
+        "maxrank":2,
+        "mods":[]
+    },
+    {
+        "id": "itr",
+        "name": "Improved Treatement",
+        "type": "Skill",
+        "effect": "Improves your Treatment Revive skill",
+        "description": "When you use the Treatment skill to revive a subject, you can provide additional benefits. For each degree of success on your DC 15 Treatment check, you can do one of the following:\n\n•Remove a –1 penalty to Toughness resistance checks due to damage.\n•Remove one of the following conditions: blind, dazed, deaf, fatigued, or impaired.\n•Reduce one of the following conditions: disabled, exhausted, or stunned. The condition is reduced to impaired, fatigued, or dazed, respectively.\n•Restore one lost rank to a weakened ability.\nYou can apply the same benefit more than once, such as removing multiple Toughness penalties or restoring multiple ranks of a weakened ability.",
+        "source": "team",
+        "ranked": false,
+        "mods": []
+    },
+    {
         "id": "imt",
         "name": "Improved Trip",
         "type": "Combat",
@@ -525,7 +566,6 @@
         "description": "When wielding an improvised close combat weapon—anything from a chair to a telephone pole or entire car—you use your Close Combat: Unarmed skill bonus for attack checks with the “weapon” rather than relying on your general Close Combat skill bonus. Additional ranks in this advantage give you a +1 bonus to Damage with improvised weapons per rank. Your maximum Damage bonus is still limited by power level, as usual.",
         "source": "core",
         "ranked": true,
-
         "mods": []
     },
     {
@@ -536,7 +576,6 @@
         "description": "You can inspire your allies to greatness. Once per scene, by taking a standard action and spending a heroic point, allies able to interact with you gain a +1 circumstance bonus per Inspire rank on all checks until the start of your next round, with a maximum bonus of +5. You do not gain the bonus, only your allies do. The inspiration bonus ignores power level limits, like other uses of heroic points. Multiple uses of Inspire do not stack, only the highest bonus applies.",
         "source": "core",
         "ranked": true,
-
         "maxrank": 5,
         "mods": []
     },
@@ -588,7 +627,6 @@
         "description": "You can speak and understand additional languages. With one rank in this advantage, you know an additional language. For each additional rank, you double your additional known languages: two at rank 2, four at rank 3, eight at rank 4, etc. So a character with Languages 7 is fluent in 64 languages! Characters are assumed to be fluent in any languages they know, including being able to read and write in them.",
         "source": "core",
         "ranked": true,
-
         "mods": []
     },
     {
@@ -609,7 +647,6 @@
         "description": "Once per round, you can choose to reroll a die roll, like spending a heroic point, including adding 10 to rerolls of 10 or less. You can do this a number of times per game session equal to your Luck rank, with a maximum rank of half the series power level (rounded down). Your Luck ranks refresh when your heroic points “reset” at the start of an adventure. The GM may choose to set a different limit on ranks in this advantage, depending on the series.",
         "source": "core",
         "ranked": true,
-
         "mods": []
     },
     {
@@ -620,7 +657,6 @@
         "description": "You have a follower or minion. This minion is an independent character with a Character point total of (advantage rank x 15). Minions are subject to the normal power level limits, and cannot have minions themselves. Your minions (if capable of independent thought) automatically have a helpful attitude toward you. They are subject to the normal rules for minions.\nMinions do not earn Character points. Instead, you must spend earned Character points to increase your rank in this advantage to improve the minion’s Character point total and traits. Minions also do not have Victory points. Any lost minions are replaced in between adventures with other followers with similar abilities at the Gamemaster’s discretion.",
         "source": "core",
         "ranked": true,
-
         "mods": []
     },
     {

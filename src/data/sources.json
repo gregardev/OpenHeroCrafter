@@ -10,5 +10,9 @@
     {
         "id": "teen",
         "label": "Hero Resources: Teen"
+    },
+    {
+        "id": "team",
+        "label":"Hero Resources: Superteam"
     }
 ]
