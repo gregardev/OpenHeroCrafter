@@ -14,5 +14,9 @@
     {
         "id": "team",
         "label":"Hero Resources: Superteam"
+    },
+    {
+        "id": "time",
+        "label":"Hero Resources: Time Travel"
     }
 ]

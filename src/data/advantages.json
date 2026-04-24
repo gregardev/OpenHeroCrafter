@@ -10,6 +10,17 @@
         "mods": []
     },
     {
+        "id": "adl",
+        "name": "Adaptable Linguist",
+        "type": "Skill",
+        "effect": "Pick up new languages fast.",
+        "description": "You have a remarkable facility for languages, letting you quickly adapt to new ones you encounter, based on what you already know. If you have one rank in this advantage, you can interact in an archaic or related dialect of a language you know with no circumstance penalty, so you could effectively pick up Old English immediately based off English, for example. If you have two ranks in this advantage, you can interact in any language related to one that you already know with only a –2 circumstance penalty, so you could, for example, interact in medieval French based off knowing modern Italian (another Romance language). With three ranks in this advantage, you can pick up basic fluency in any language that you’re exposed to for more than a day, enough to use interaction skills normally with a –5 circumstance penalty. This is reduced to –2 after a week and 0 after two weeks.",
+        "source": "time",
+        "ranked": true,
+        "maxrank":3,
+        "mods": []
+    },
+    {
         "id": "agf",
         "name": "Agile Feint",
         "type": "Skill",
@@ -200,6 +211,26 @@
         "effect": "Suffocate an opponent you have successfully grabbed.",
         "description": "If you successfully grab and restrain an opponent (see Grab), you can apply a chokehold, causing your opponent to begin suffocating for as long as you continue to restrain your target (see Suffocation).",
         "source": "core",
+        "ranked": false,
+        "mods": []
+    },
+    {
+        "id": "chb",
+        "name": "Chronal Bulwark",
+        "type": "Chronal",
+        "effect": "You are a fixed point in time.",
+        "description": "You are a fixed point in time. While history may be altered, your existence remains unaffected. You are immune to temporal transformations involving changes in the timeline. Of course, this Advantage also means you’re unable to benefit from changes in your personal timeline, and you can easily end up with the paradox of remaining your normal self in a timeline where you should not even exist. Chronal Bulwark preserves your body and mind as they are in your 'original' timeline, but leaves you with no memory of new pasts if someone changes the timeline",
+        "source": "time",
+        "ranked": false,
+        "mods": []
+    },
+    {
+        "id": "chm",
+        "name": "Chronal Memory",
+        "type": "Chronal",
+        "effect": "Your perception and memory transcend linear time.",
+        "description": "Your perception and memory transcend linear time. If your personal history is changed, you remember both versions: the original and the changed version. This means you know when the history of your timeline is altered and (at least generally) what the change is, since you can remember the previous version. If there are multiple changes, you remember every version, although the GM may require an Awareness check in some cases to sort out the different iterations.",
+        "source": "time",
         "ranked": false,
         "mods": []
     },
@@ -797,6 +828,16 @@
         "effect": "Make routine checks with one skill under any conditions.",
         "description": "Choose a skill. You can make routine checks with that skill even when under pressure. This advantage does not allow you to make routine checks with skills that do not normally allow you to do so. You can take this advantage multiple times for different skills.",
         "source": "core",
+        "ranked": false,
+        "mods": []
+    },
+    {
+        "id": "soa",
+        "name": "Socially Adaptable",
+        "type": "Skill",
+        "effect": "Adapt quickly to new social situations.",
+        "description": "You adapt quickly to new social situations, even being thrust into entirely new cultures. You only suffer a –2 circumstance penalty to interaction skill checks for your first 24 hours in an unfamiliar culture, rather than indefinitely.\n You may be deprived of Advantages like Connected, Contacts, or Well-informed when removed from your usual social network; if you are Socially Adaptable, you develop a new network within a matter of hours after finding yourself in a new situation, so long as you are able to interact with the locals. Every 6 hours you spend interacting with locals in a new social situation, make a DC 15 Persuasion check. On a success, you have created a new network sufficient to use social-dependent advantages. On a failed check, you can try again on the next day, with a +1 cumulative circumstance bonus for each day that passes.",
+        "source": "time",
         "ranked": false,
         "mods": []
     },
