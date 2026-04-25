@@ -51,7 +51,7 @@ export default function HeroMeasurementsTable(){
         >
             <Table
                 color="primary"
-                aria-label="Defenses" 
+                aria-label="Measurements" 
                 sx={{width:'500px'}}
                 size="sm"
                 stickyHeader
