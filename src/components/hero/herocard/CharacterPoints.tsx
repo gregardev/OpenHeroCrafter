@@ -9,13 +9,14 @@ export default function CharacterPoints(){
     const [spentTotalPoints, setSpentTotalPoints] = useState(0);
     const [spentAbilityPoints, setSpentAbilityPoints] = useState(0);
     const [spentDefensePoints, setSpentDefensePoints] = useState(0);
+    const [spentAdvantagePoints, setSpentAdvantagePoints] = useState(0);
 
     function calculateTotalAvailableCharacterPoints(){
         return (Number(activeHero.pl ?? 0) * 15) + (Number(activeHero.xp)?? 0);
     }
 
     function calculateSpentPointsTotal(){
-        return spentAbilityPoints + spentDefensePoints;
+        return spentAbilityPoints + spentDefensePoints + spentAdvantagePoints;
     }
 
     function calculateSpentAbilityPoints(){
@@ -37,24 +38,31 @@ export default function CharacterPoints(){
         return ( Number(activeHero.rdod) +  Number(activeHero.rpar) + Number(activeHero.rfod) + Number(activeHero.rwid));
     }   
 
+    function calculateSpentAdvantagePoints(){
+        let sum = 0;
+        activeHero.advantages.forEach(adv =>(sum = sum + adv.rank));
+        return sum;
+    }
+
     const [totalAvailableCharacterPoints, setTotalAvailableCharacterPoints] = useState(calculateTotalAvailableCharacterPoints);
 
     useEffect(function(){
         setTotalAvailableCharacterPoints(calculateTotalAvailableCharacterPoints);
-        setSpentAbilityPoints(calculateSpentAbilityPoints)
-        setSpentDefensePoints(calculateSpentDefensePoints)
+        setSpentAbilityPoints(calculateSpentAbilityPoints);
+        setSpentDefensePoints(calculateSpentDefensePoints);
+        setSpentAdvantagePoints(calculateSpentAdvantagePoints)
     },[activeHero]);
 
     useEffect(function(){
         setSpentTotalPoints(calculateSpentPointsTotal);
-    },[spentAbilityPoints, spentDefensePoints]);
+    },[spentAbilityPoints, spentDefensePoints, spentAdvantagePoints]);
 
     return(
         <Sheet
             variant="outlined"
         >
             <Typography>
-                Character Point Totals:{spentTotalPoints} = Abilities {spentAbilityPoints} + Defenses {spentDefensePoints}. Total Avialble Character Points:{totalAvailableCharacterPoints}
+                Character Point Totals:{spentTotalPoints} = Abilities {spentAbilityPoints} + Defenses {spentDefensePoints} + Advantages {spentAdvantagePoints}. Total Avialble Character Points:{totalAvailableCharacterPoints}
             </Typography>
         </Sheet>
     )

@@ -2,6 +2,7 @@ import { createContext, type ReactNode } from "react";
 import useSaveHeroToLocalStorage from "../hooks/useSaveHeroToLocalStorage";
 import { defaultHero } from "../interfaces/hero";
 import type { ActiveHeroContextValue } from "../interfaces/activeHeroContextValue";
+import type { Advantage } from "../interfaces/advantage";
 
 type Props = {
   children: ReactNode;
@@ -104,6 +105,17 @@ export default function ActiveHeroContextProvider({children}:Props){
         setActiveHero({ ...activeHero, ...changes, ['d' + ability]: newVal });
     }
 
+    function changeActiveHeroAddAdvantage(adv:Advantage){
+        let newHeroAdvantages = Object.assign([],activeHero.advantages);
+        newHeroAdvantages.push(adv);
+        setActiveHero({...activeHero, advantages:Object.assign([],newHeroAdvantages)});
+    }
+
+    function changeActiveHeroRemAdvantage(advID:string){
+        const newHeroAdvantages = activeHero.advantages.filter((adv:Advantage) => adv.id !== advID)
+        setActiveHero({...activeHero, advantages:Object.assign([],newHeroAdvantages)});
+    }
+
     return (
         <ActiveHeroContext.Provider 
             value={{
@@ -111,7 +123,9 @@ export default function ActiveHeroContextProvider({children}:Props){
                 setActiveHero:setActiveHero,
                 changeActiveHeroAttrSTR: changeActiveHeroAttrSTR,
                 changeActiveHeroAttrNUM: changeActiveHeroAttrNUM,
-                changeActiveHeroAbilityDisable: changeActiveHeroAbilityDisable
+                changeActiveHeroAbilityDisable: changeActiveHeroAbilityDisable,
+                changeActiveHeroAddAdvantage: changeActiveHeroAddAdvantage,
+                changeActiveHeroRemAdvantage: changeActiveHeroRemAdvantage
             }}
         >
             {children}

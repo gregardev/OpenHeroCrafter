@@ -937,10 +937,9 @@
         "name": "Ultimate Effort",
         "type": "Fortune",
         "effect": "Spend a heroic point to get an effective 20 on a specific check.",
-        "description": "You can spend a Heroic point on a particular check and treat the roll as a 20 (meaning you don’t need to roll the die at all, just apply a result of 20 to your modifier). This is not a natural 20, but is treated as a roll of 20 in all other respects. You choose the particular check the advantage applies to when you acquire it and the GM must approve it. You can take Ultimate Effort multiple times, each time, it applies to a different check. This advantage may not be used after you’ve rolled the die to determine if you succeed.",
+        "description": "You can spend a Heroic point on a particular check and treat the roll as a 20 (meaning you don’t need to roll the die at all, just apply a result of 20 to your modifier). This is not a natural 20, but is treated as a roll of 20 in all other respects. You choose the particular check the advantage applies to when you acquire it and the GM must approve it. You can take Ultimate Effort multiple times, each time, it applies to a different check. This advantage may not be used after you’ve rolled the die to determine if you succeed.\n(For the sake of this character builder it is treated as ranked advantage with each rank being applied to a different skill)",
         "source": "core",
-        "ranked": false,
-        "repeatable": true,
+        "ranked": true,
         "mods": []
     },
     {

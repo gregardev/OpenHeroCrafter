@@ -1,3 +1,4 @@
+import type { Advantage } from "./advantage";
 import type { Hero } from "./hero";
 
 export interface ActiveHeroContextValue {
@@ -5,5 +6,7 @@ export interface ActiveHeroContextValue {
     setActiveHero: React.Dispatch<React.SetStateAction<Hero>>;
     changeActiveHeroAttrSTR: (field:string, newVal:string) => void;
     changeActiveHeroAttrNUM: (field:string, newVal:number) => void;
-    changeActiveHeroAbilityDisable: (ability:string, newVal:boolean) => void
+    changeActiveHeroAbilityDisable: (ability:string, newVal:boolean) => void;
+    changeActiveHeroAddAdvantage: (adv:Advantage) => void;
+    changeActiveHeroRemAdvantage: (advID:string) => void;
 }

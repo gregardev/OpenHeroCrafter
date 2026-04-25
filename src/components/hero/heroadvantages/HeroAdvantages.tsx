@@ -1,9 +1,12 @@
-import { Box, Card, Divider, Table, Typography } from "@mui/joy";
+import { Box, Card, Checkbox, Divider, Input, Table, Typography } from "@mui/joy";
 import advantages from "../../../data/advantages.json";
 import { useEffect, useState } from "react";
 import HeroAdvantageModal from "./HeroAdvantageModal";
+import useActiveHero from "../../../hooks/useActiveHero";
 
 export default function HeroAdvantages() {
+
+    const {activeHero, changeActiveHeroAddAdvantage, changeActiveHeroRemAdvantage} = useActiveHero();
 
     const [openModal, setOpenModal] = useState(false);
     const [modalAdvantage, setModalAdvantage] = useState({
@@ -23,7 +26,15 @@ export default function HeroAdvantages() {
         if(modalAdvantage.title != '' && modalAdvantage.description != '' ){
             setOpenModal(true);        
         }
-    },[modalAdvantage])
+    },[modalAdvantage]);
+
+    function handleAdvantageSelection(advID:string,checked:boolean){
+        if (checked){
+            changeActiveHeroAddAdvantage({id:advID,rank:1});
+        } else {
+            changeActiveHeroRemAdvantage(advID);
+        }
+    }
 
     return (
         <Box>
@@ -37,7 +48,7 @@ export default function HeroAdvantages() {
             <Card sx={{ m: 1 }} variant="soft" size="lg">
                 <Box
                     sx={{
-                        maxHeight:800,
+                        maxHeight:550,
                         overflow:'auto',
                     }}
                 >
@@ -56,19 +67,39 @@ export default function HeroAdvantages() {
                             <th style={{width:80}}>Ranked</th>
                             <th style={{width:80}}>Max Rank</th>
                             <th>Effect</th>
+                            <th style={{width:80}}>Active</th>
+                            <th style={{width:100}}>Rank</th>
                         </thead>
                         <tbody>
                             {advantages.map((adv) => (
                                 <tr
-                                    onClick={()=>changeModalAdvantage(adv.name,adv.description)}
                                     style={{cursor:'pointer'}}
                                 >
-                                    <td>{adv.name}</td>
-                                    <td>{adv.type}</td>
-                                    <td>{adv.source}</td>
-                                    <td>{adv.ranked?'Yes':'No'}</td>
-                                    <td>{adv.maxrank?adv.maxrank:'---'}</td>
-                                    <td>{adv.effect}</td>
+                                    <td onClick={()=>changeModalAdvantage(adv.name,adv.description)}>{adv.name}</td>
+                                    <td onClick={()=>changeModalAdvantage(adv.name,adv.description)}>{adv.type}</td>
+                                    <td onClick={()=>changeModalAdvantage(adv.name,adv.description)}>{adv.source}</td>
+                                    <td onClick={()=>changeModalAdvantage(adv.name,adv.description)}>{adv.ranked?'Yes':'No'}</td>
+                                    <td onClick={()=>changeModalAdvantage(adv.name,adv.description)}>{adv.maxrank?adv.maxrank:'---'}</td>
+                                    <td onClick={()=>changeModalAdvantage(adv.name,adv.description)}>{adv.effect}</td>
+                                    <td>
+                                        <Checkbox
+                                            checked={activeHero.advantages.some(heroadv => heroadv.id === adv.id)}
+                                            onChange={(e)=>handleAdvantageSelection(adv.id,e.target.checked)}
+                                        />
+                                    </td>
+                                    <td>
+                                        {adv.ranked
+                                        ?
+                                        <Input 
+                                            type="number"
+                                            disabled={!activeHero.advantages.some(heroadv => heroadv.id === adv.id)}
+                                        />
+                                        :
+                                        <>
+                                        </>
+                                        }
+                                        
+                                    </td>
                                 </tr>
                             ))}
                         </tbody>
