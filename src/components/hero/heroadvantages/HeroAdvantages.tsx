@@ -6,8 +6,8 @@ import useActiveHero from "../../../hooks/useActiveHero";
 
 export default function HeroAdvantages() {
 
-    const {activeHero, changeActiveHeroAddAdvantage, changeActiveHeroRemAdvantage} = useActiveHero();
-
+    const {activeHero, changeActiveHeroAddAdvantage, changeActiveHeroRemAdvantage, changeActiveHeroAdvantageRank, getActiveHeroAdvantageRank} = useActiveHero();
+    
     const [openModal, setOpenModal] = useState(false);
     const [modalAdvantage, setModalAdvantage] = useState({
         title:'',
@@ -36,6 +36,9 @@ export default function HeroAdvantages() {
         }
     }
 
+    function handleAdvantageRankChange(advID: string, newRank: number) {
+        changeActiveHeroAdvantageRank(advID, newRank);
+    }
     return (
         <Box>
             <Typography
@@ -93,10 +96,11 @@ export default function HeroAdvantages() {
                                         <Input 
                                             type="number"
                                             disabled={!activeHero.advantages.some(heroadv => heroadv.id === adv.id)}
+                                            value={getActiveHeroAdvantageRank(adv.id)}
+                                            onChange={(e)=>handleAdvantageRankChange(adv.id,Number(e.target.value))}
                                         />
                                         :
-                                        <>
-                                        </>
+                                        null
                                         }
                                         
                                     </td>

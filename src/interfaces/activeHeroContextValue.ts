@@ -8,5 +8,7 @@ export interface ActiveHeroContextValue {
     changeActiveHeroAttrNUM: (field:string, newVal:number) => void;
     changeActiveHeroAbilityDisable: (ability:string, newVal:boolean) => void;
     changeActiveHeroAddAdvantage: (adv:Advantage) => void;
-    changeActiveHeroRemAdvantage: (advID:string) => void;
+    changeActiveHeroRemAdvantage: (advID: string) => void;
+    changeActiveHeroAdvantageRank: (advID: string, newRank: number) => void;
+    getActiveHeroAdvantageRank: (advID: string) => number;
 }

@@ -106,7 +106,7 @@ export default function ActiveHeroContextProvider({children}:Props){
     }
 
     function changeActiveHeroAddAdvantage(adv:Advantage){
-        let newHeroAdvantages = Object.assign([],activeHero.advantages);
+        const newHeroAdvantages = Object.assign([],activeHero.advantages);
         newHeroAdvantages.push(adv);
         setActiveHero({...activeHero, advantages:Object.assign([],newHeroAdvantages)});
     }
@@ -114,6 +114,21 @@ export default function ActiveHeroContextProvider({children}:Props){
     function changeActiveHeroRemAdvantage(advID:string){
         const newHeroAdvantages = activeHero.advantages.filter((adv:Advantage) => adv.id !== advID)
         setActiveHero({...activeHero, advantages:Object.assign([],newHeroAdvantages)});
+    }
+
+    function changeActiveHeroAdvantageRank(advID: string, newRank: number) {
+        const newAdv = {
+            id: advID,
+            rank: newRank
+        };
+        const newHeroAdvantages = activeHero.advantages.filter((adv: Advantage) => adv.id !== advID);
+        newHeroAdvantages.push(newAdv);
+        setActiveHero({...activeHero, advantages:Object.assign([],newHeroAdvantages)});
+    }
+
+    function getActiveHeroAdvantageRank(advID: string) {
+        const advantage = activeHero.advantages.find((adv: Advantage) => adv.id === advID) as Advantage;
+        return advantage?.rank ?? 0;
     }
 
     return (
@@ -125,7 +140,9 @@ export default function ActiveHeroContextProvider({children}:Props){
                 changeActiveHeroAttrNUM: changeActiveHeroAttrNUM,
                 changeActiveHeroAbilityDisable: changeActiveHeroAbilityDisable,
                 changeActiveHeroAddAdvantage: changeActiveHeroAddAdvantage,
-                changeActiveHeroRemAdvantage: changeActiveHeroRemAdvantage
+                changeActiveHeroRemAdvantage: changeActiveHeroRemAdvantage,
+                changeActiveHeroAdvantageRank: changeActiveHeroAdvantageRank,
+                getActiveHeroAdvantageRank: getActiveHeroAdvantageRank
             }}
         >
             {children}
