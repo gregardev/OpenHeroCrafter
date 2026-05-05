@@ -65,6 +65,9 @@ export interface Hero {
     // > will Defense 
     wid: number // stat
     rwid: number // rank
+
+    // For Play 
+    hits: number // number of hits
     
     advantages: Advantage[]
 }
@@ -109,7 +112,8 @@ export const defaultHero: Hero = {
     fod:0,
     rfod:0,
     wid:0,
-    rwid:0,
+    rwid: 0,
+    hits: 0,
     
     advantages:[]
 }

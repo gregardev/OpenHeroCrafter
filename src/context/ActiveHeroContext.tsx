@@ -126,11 +126,6 @@ export default function ActiveHeroContextProvider({children}:Props){
         setActiveHero({...activeHero, advantages:Object.assign([],newHeroAdvantages)});
     }
 
-    function getActiveHeroAdvantageRank(advID: string) {
-        const advantage = activeHero.advantages.find((adv: Advantage) => adv.id === advID) as Advantage;
-        return advantage?.rank ?? 0;
-    }
-
     return (
         <ActiveHeroContext.Provider 
             value={{
@@ -141,8 +136,7 @@ export default function ActiveHeroContextProvider({children}:Props){
                 changeActiveHeroAbilityDisable: changeActiveHeroAbilityDisable,
                 changeActiveHeroAddAdvantage: changeActiveHeroAddAdvantage,
                 changeActiveHeroRemAdvantage: changeActiveHeroRemAdvantage,
-                changeActiveHeroAdvantageRank: changeActiveHeroAdvantageRank,
-                getActiveHeroAdvantageRank: getActiveHeroAdvantageRank
+                changeActiveHeroAdvantageRank: changeActiveHeroAdvantageRank
             }}
         >
             {children}

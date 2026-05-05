@@ -33,7 +33,7 @@ const defenses = [
 ];
 
 export default function HeroPlay() {
-    const { activeHero } = useActiveHero();
+    const { activeHero, changeActiveHeroAttrNUM } = useActiveHero();
     const [rollResult, setRollResult] = useState("");
     const [criticalRollColor, setCriticalRollColor] = useState("neutral");
 
@@ -163,25 +163,54 @@ export default function HeroPlay() {
                         </tbody>
                     </Table>
                 </Card>
-                <Card size="lg" variant="soft" sx={{ m: 1, width:400 }}>
+                <Card size="lg" variant="soft" sx={{ m: 1, width: 800}}>
                     <Typography level="h4" sx={{ fontFamily: "Comicy", fontStyle: "italic" }}>
                         Combat
                     </Typography>
                     <Divider />
-                    <Typography  sx={{ fontFamily: "Comicy", fontStyle: "italic" }}>
-                        Attacks
-                    </Typography>
-                    <Divider />
-                    <Typography  sx={{ fontFamily: "Comicy", fontStyle: "italic" }}>
-                        Hits
-                    </Typography>
-                    <Divider />
-                    <Button onClick={() => roll({
-                        modifier: activeHero.tou,
-                        label:"Toughness"
-                    })}>
-                        <Typography level="h4">Toughness {activeHero.tou}</Typography>
-                    </Button>
+                    <Stack
+                        direction="row"
+                    >
+                        <Box sx={{width:400}}>
+                            <Typography  sx={{ fontFamily: "Comicy", fontStyle: "italic" }}>
+                                Attacks
+                            </Typography>
+                            <Divider />
+                        </Box>
+                        <Divider orientation="vertical"/>
+                        <Box sx={{width:400}}>
+                            <Typography  sx={{ fontFamily: "Comicy", fontStyle: "italic" }}>
+                                Hits
+                            </Typography>
+                            <Divider />
+                            <Stack
+                                direction="row"
+                            >
+                                <Button color="danger" onClick={()=>changeActiveHeroAttrNUM('hits',activeHero.hits + 1)}>
+                                    <Typography level="h4">Hit</Typography>
+                                </Button>
+                                <Sheet>
+                                    <Typography level="h3" >{activeHero.hits}</Typography>
+                                </Sheet>
+                                <Button color="success" onClick={()=>changeActiveHeroAttrNUM('hits', activeHero.hits - 1 > 0?activeHero.hits - 1:0)}>
+                                    <Typography level="h4">Heal</Typography>
+                                </Button>
+                            </Stack>
+                            <Divider />
+                            <Button onClick={() => roll({
+                                modifier: activeHero.tou - activeHero.hits,
+                                label:"Toughness"
+                            })}>
+                                <Typography level="h4">Toughness {activeHero.tou - activeHero.hits}</Typography>
+                            </Button>
+                        </Box>
+                    </Stack>
+                    
+                   
+                    
+                </Card>
+                <Card size="lg" variant="soft" sx={{ m: 1}}>
+                    
                 </Card>
             </Stack>
         </Box>

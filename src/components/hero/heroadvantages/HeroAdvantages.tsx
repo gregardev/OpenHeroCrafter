@@ -3,10 +3,11 @@ import advantages from "../../../data/advantages.json";
 import { useEffect, useState } from "react";
 import HeroAdvantageModal from "./HeroAdvantageModal";
 import useActiveHero from "../../../hooks/useActiveHero";
+import HeroAdvantagesRankInput from "./HeroAdvantagesRankInput";
 
 export default function HeroAdvantages() {
 
-    const {activeHero, changeActiveHeroAddAdvantage, changeActiveHeroRemAdvantage, changeActiveHeroAdvantageRank, getActiveHeroAdvantageRank} = useActiveHero();
+    const {activeHero, changeActiveHeroAddAdvantage, changeActiveHeroRemAdvantage, changeActiveHeroAdvantageRank} = useActiveHero();
     
     const [openModal, setOpenModal] = useState(false);
     const [modalAdvantage, setModalAdvantage] = useState({
@@ -92,13 +93,12 @@ export default function HeroAdvantages() {
                                     </td>
                                     <td>
                                         {adv.ranked
-                                        ?
-                                        <Input 
-                                            type="number"
-                                            disabled={!activeHero.advantages.some(heroadv => heroadv.id === adv.id)}
-                                            value={getActiveHeroAdvantageRank(adv.id)}
-                                            onChange={(e)=>handleAdvantageRankChange(adv.id,Number(e.target.value))}
-                                        />
+                                            ?
+                                            <HeroAdvantagesRankInput 
+                                                activeHero={activeHero}
+                                                handleAdvantageRankChange={handleAdvantageRankChange}
+                                                advID={adv.id}
+                                            />
                                         :
                                         null
                                         }

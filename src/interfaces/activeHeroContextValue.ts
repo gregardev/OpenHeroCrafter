@@ -10,5 +10,4 @@ export interface ActiveHeroContextValue {
     changeActiveHeroAddAdvantage: (adv:Advantage) => void;
     changeActiveHeroRemAdvantage: (advID: string) => void;
     changeActiveHeroAdvantageRank: (advID: string, newRank: number) => void;
-    getActiveHeroAdvantageRank: (advID: string) => number;
 }
